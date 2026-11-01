@@ -1,0 +1,23 @@
+{
+  "deployment": "fa1d5842-3e75-4ff8-8eb0-dea915f1b5db",
+  "commit": "f2df2f8",
+  "platform": "https://final.hackitaly.ai/form-check",
+  "started_local": "2026-10-09 15:07 Europe/Rome",
+  "observed_completed_at": "2026-10-09T13:10:03.064243+00:00",
+  "button_invocations_this_release": 1,
+  "passed": 6,
+  "total": 6,
+  "migration_seconds": 81.06,
+  "example_passed": 10,
+  "example_total": 10,
+  "failed_checks": [],
+  "checks": [
+    "health 200 version 2026-09",
+    "bearer accepted / missing token 401",
+    "reset 204",
+    "migration within 5 minutes",
+    "examples 10/10",
+    "assistant sample within 60 seconds"
+  ],
+  "screenshot": "/tmp/csv-form-check-pass.png"
+}

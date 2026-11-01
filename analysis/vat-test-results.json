@@ -1,0 +1,69 @@
+{
+  "model_calls": 0,
+  "production_writes": 0,
+  "deployment_performed": false,
+  "tests": {
+    "sqlite": [
+      {
+        "tests": "208",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "15.371"
+      }
+    ],
+    "postgres": [
+      {
+        "tests": "208",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "37.912"
+      }
+    ]
+  },
+  "sha256": {
+    "analysis/audit_sinergia.py": "2720b6961d685a06fbb5b9856f0e8f8641167889cf90c394ece61304c449c4b4",
+    "analysis/final_local_verification.py": "93d5013352c11340b900dbcc4d49fa34222098974e59fca645461231d7b9d63c",
+    "app/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "app/assistant/__init__.py": "b632dfd17ee73ec9dc5c609ce3cc444ac4fe3bf113d73fa557a79a09d6980fa9",
+    "app/assistant/client.py": "e772960ab038f016d69cc7b4739969661252662bf97d9973e1c44567d6c0f73d",
+    "app/assistant/presentation.py": "b1a39e73b06c2b13e67edccc5bbb85f87776904cc4fff2bd41d7f29c760cc880",
+    "app/assistant/prompt.py": "f9ec622a57c491f47a629a793375737217eb0c9deda408e14c31b8a16d8ef3a8",
+    "app/assistant/router.py": "cca65be17a0855516116db22d80f25d1219f75ae3bd862e732490246e7896de0",
+    "app/assistant/tools.py": "0c36f28b458caf366f4c8dc1d29c56743c15fe8e43e37cab21c2031045d4356e",
+    "app/associations.py": "45dd7341aa530353a6c4707e1bfc4c56f322dc21eb22f6aef664ca7354777a01",
+    "app/automations.py": "7ab448eb783667bfa3bdf28c36d3a541e05c4d8cc97609bfd9501a9b3058a17f",
+    "app/catalog.py": "631a2217e9ed86fc5965a0850680b29a61e41b7d39f89fd06f37cdcdfd0f8eb4",
+    "app/db.py": "73a2a41d6c02f8f75c6af8854665b1a44985ebb35d8361b3eeeab58530dac877",
+    "app/dependencies.py": "bb83cac1b6f5cc4c7f6c5a92d5deb7b1595340e7dac0210772af743760c2c03e",
+    "app/domain_matching.py": "a2f3b0f843271cfc36cef0ef0df99e902bdfd402877dcdf9b4954e37961b12a7",
+    "app/main.py": "d521eb49645d44a137b917b448c177cb5c86cfa408d69fac79e75931747b27d0",
+    "app/migration.py": "73612a53fdf191e245fa4daac06f8881592d5da32540a4a0126c52d2222601f7",
+    "app/normalize.py": "e4d6f480a2b59f8d598d5fe428574b71d322f20c2585625b7c4fc2b083498c06",
+    "app/schemas.py": "bb1286d1f3c989bd2ab9fbd3629cbe81e3a813b868103001040caf8c9559b6b2",
+    "app/search.py": "ef1560b5cc0906c694ea0071a94edd9f0e71ac4cca6c7f92027e94b79225a29f",
+    "app/store.py": "1267a1d547b0dd11977f9ca95f27715a135d2eaaf7cbe5763d47ff99653b7376",
+    "app/ui.py": "39cd579710d0af3ec9abad155239111c3c3044fbbfd1a65972786cdff123b76f",
+    "app/ui_auth.py": "27bfe8443cd144c118c00c28750d4950fe3a9e098e810c836e42879d0faffb56",
+    "app/ui_sql.py": "bba1f8b555d9ee7c2b831758f24204a90dfcbed576ca2c8890f42ca5d122cac3",
+    "app/ui_workspace.py": "7f00b070f9578dd8e2da5427af8caf2c62646c805a843c10687ec2a7220886e4",
+    "tests/conftest.py": "f5329fa5966df4d92fb982efcbccaf6cc20ccc1736129ff8af7dfe7a27ba6eaf",
+    "tests/test_api_conformity.py": "1b8ee72e34c4b4e6662a6f8e329e526cfc31a7467a83ae1f38a71d73f08adeff",
+    "tests/test_assistant.py": "cdbba49c1e109b8e221994799c58ea180e103f45738b669f9cc746bf10d96612",
+    "tests/test_assistant_stability.py": "ca9b754e86e7f7e0adf75c73eb5dab84a601a5a428db4c4e6094ee84830454b6",
+    "tests/test_automations.py": "1cc683d0f47b644ce2507141a11f24665f649fb08c8bde43aa43a6486637ebd7",
+    "tests/test_bulk_indexes.py": "0ba96b90a2d419e9ae39e72460e9f1de6bacd1535fa4413952900a2488487d10",
+    "tests/test_claude_backend.py": "d51c63d55e56d8204c75ffe8ebac49fb1000d98845bd49f5fac412c93f803e1c",
+    "tests/test_final_business.py": "88c329c5e476c8962b135f0ee5e7680e0c5d6a1fbd73c6caaabb450ff09e0bf1",
+    "tests/test_final_integration.py": "160bad14b94a7d536925022ab953190f474565c025f3bf4292c5fc9a17e3b712",
+    "tests/test_migration.py": "e58993724daaa43a64b44854a8774a72aad1ea7ad73dcb024ede8dc4fabade89",
+    "tests/test_release_stress.py": "756e0ece8a06c28698d176ab64c34904421c62e03ce189a7e55ba01d5faf34a0",
+    "tests/test_robustness.py": "db37d39205541a971c7255d9fb906ff10c912ff4e1064849c46e4ea773d70d26",
+    "tests/test_ui.py": "326e4e87ecba0978ed09dc8b94d1cbac391d45b4d426027829787f6029fcb1b6",
+    "tests/test_ui_auth.py": "66301428cb5976ee99a940ca75816c334e835b5e0c9d778d9bb252cbf5005b51",
+    "tests/test_ui_workspace.py": "2c2071bf67472c70f4a022fd1be298f0b50d97d2f4edd02804ef3cf0871721a1",
+    "tests/test_upsert.py": "54fa74a30af4ffe7e60b82c87a44ecd88013139a8f4e600f672804cdf12ef686",
+    "tests/test_vat.py": "701ce5121a178f951e4927d51736abe4683a337bdb61bb1a19306e840488efc6"
+  }
+}

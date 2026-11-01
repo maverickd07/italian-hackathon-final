@@ -1,0 +1,75 @@
+{
+  "commit": "db68bcd6c78136982d5b20f2c72945ea9eca6f88",
+  "deployment": "83d3f46b-756b-4c68-83bc-d6627d9dc484",
+  "latest_deployments": [
+    {
+      "id": "83d3f46b-756b-4c68-83bc-d6627d9dc484",
+      "status": "SUCCESS",
+      "createdAt": "2026-10-09T12:30:29.352Z"
+    },
+    {
+      "id": "feec912b-c7b0-40e5-8648-3eaa217bc17e",
+      "status": "REMOVING",
+      "createdAt": "2026-10-09T11:56:25.134Z"
+    },
+    {
+      "id": "ac300ac2-437f-4972-9244-6d47911c6e3c",
+      "status": "REMOVED",
+      "createdAt": "2026-10-09T11:52:20.686Z"
+    }
+  ],
+  "model_calls": 0,
+  "resets": 0,
+  "migrations": 0,
+  "railway_up_calls": 1,
+  "public_health": {
+    "status": 200,
+    "body": {
+      "status": "ok",
+      "version": "2026-09",
+      "ui": {
+        "today": "/",
+        "assistant": "/assistant",
+        "companies": "/companies",
+        "contacts": "/contacts",
+        "deals": "/deals",
+        "tickets": "/tickets",
+        "dormant": "/dormant-customers"
+      }
+    }
+  },
+  "authenticated_read": {
+    "status": 200,
+    "results_count": 1
+  },
+  "snapshot_normalize_sha256": "e4d6f480a2b59f8d598d5fe428574b71d322f20c2585625b7c4fc2b083498c06",
+  "uploaded_snapshot": {
+    "all_build_inputs_match_commit": true,
+    "files_checked": 45,
+    "vat_spellings": {
+      "PI": [
+        "34340014470"
+      ],
+      "P.I.": [
+        "34340014470"
+      ],
+      "P. I.": [
+        "34340014470"
+      ]
+    }
+  },
+  "remote_source_inspection": "Not performed: user explicitly selected upload/build evidence only; no SSH key created.",
+  "freeze": "7 project chats acknowledged; 15:00 automation updated; shared AGENTS.md records freeze. UI chat messaging currently blocked by active-writer error.",
+  "final_latest_deployment": {
+    "id": "83d3f46b-756b-4c68-83bc-d6627d9dc484",
+    "status": "SUCCESS",
+    "createdAt": "2026-10-09T12:30:29.352Z"
+  },
+  "no_subsequent_deployment": true,
+  "build_evidence": {
+    "snapshot_sha256": "ce210c6033ad99ae1fcdc443ed2433a83639986ef533f676f40bc4eb037250d1",
+    "image_digest": "sha256:483be675ce36f474be3415cf378aecdabcc21e0cdd800acafd6ed36b1eadf910",
+    "copy_app_step_confirmed": true
+  },
+  "vat_verification_basis": "45 build inputs match db68bcd; all three VAT forms passed in uploaded source; successful build confirms COPY app ./app."
+}

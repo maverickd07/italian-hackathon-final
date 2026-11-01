@@ -1,0 +1,627 @@
+{
+  "started_at": "2026-10-09T12:55:05.721780+00:00",
+  "budget_rule": "Keep account balance >= $9; reserve $0.15 per in-flight turn",
+  "initial_usage": {
+    "usage": 0.00221195,
+    "limit_remaining": 9.99778805,
+    "limit": 10
+  },
+  "scenarios": {
+    "unknown_field_atomic": {
+      "request": {
+        "context": {
+          "now": "2026-10-09T12:56:07.081377+00:00",
+          "user": "nicolo.deluca@brambillaforniture.it"
+        },
+        "messages": [
+          {
+            "role": "user",
+            "content": "Per l’azienda Relay QA 1455 Catalog Guard (ID 331096191162860501278332594686220787429), cambia city in Torino e imposta il campo inventato campo_inesistente_qa a X. Esegui entrambe le modifiche insieme oppure nessuna; non sostituire quel nome di campo."
+          }
+        ]
+      },
+      "status": 200,
+      "seconds": 6.125,
+      "response": {
+        "reply": "Non ho modificato nulla: `campo_inesistente_qa` non risulta tra i campi leggibili dell’azienda, quindi non posso applicare entrambe le modifiche insieme. `city` risulta ancora `Milano`."
+      },
+      "usage_before": {
+        "usage": 0.003447445,
+        "limit_remaining": 9.996552555,
+        "limit": 10
+      },
+      "usage_after": {
+        "usage": 0.003447445,
+        "limit_remaining": 9.996552555,
+        "limit": 10
+      },
+      "verification": {
+        "unchanged": true
+      }
+    },
+    "csv_missing_sku_atomic": {
+      "request": {
+        "context": {
+          "now": "2026-10-09T12:56:39.052569+00:00",
+          "user": "nicolo.deluca@brambillaforniture.it"
+        },
+        "messages": [
+          {
+            "role": "user",
+            "content": "Aggiorna i prezzi del listino allegato, solo prodotti già esistenti. Non creare prodotti. Se una riga non può essere applicata, non modificare nessuna riga.",
+            "attachments": [
+              {
+                "name": "robustness.csv",
+                "content_type": "text/csv",
+                "content": "codice_articolo;prezzo_listino\nRELAYQA1455;12,34\nRELAYQA1455MISSING;99,00\n"
+              }
+            ]
+          }
+        ]
+      },
+      "status": 200,
+      "seconds": 8.758,
+      "response": {
+        "reply": "Non ho modificato alcuna riga. Il prodotto con SKU **BF-01455** non risulta esistente; inoltre compare due volte nel listino con prezzi diversi (**12,34** e **99,00**)."
+      },
+      "usage_before": {
+        "usage": 0.003447445,
+        "limit_remaining": 9.996552555,
+        "limit": 10
+      },
+      "usage_after": {
+        "usage": 0.00389144,
+        "limit_remaining": 9.99610856,
+        "limit": 10
+      },
+      "verification": {
+        "existing_product_unchanged": true,
+        "product_count_unchanged": true
+      },
+      "interpretation": "Fixture issue: both synthetic noncanonical SKUs normalize to BF-01455; no mutations, but not evidence for intended missing-second-SKU scenario."
+    },
+    "csv_missing_canonical_sku_atomic": {
+      "request": {
+        "context": {
+          "now": "2026-10-09T12:57:19.744284+00:00",
+          "user": "nicolo.deluca@brambillaforniture.it"
+        },
+        "messages": [
+          {
+            "role": "user",
+            "content": "Aggiorna i prezzi del listino allegato, solo prodotti già esistenti. Non creare prodotti. Se una riga non può essere applicata, non modificare nessuna riga.",
+            "attachments": [
+              {
+                "name": "listino.csv",
+                "content_type": "text/csv",
+                "content": "codice_articolo;prezzo_listino\nBF-991455;12,34\nBF-991456;99,00\n"
+              }
+            ]
+          }
+        ]
+      },
+      "status": 200,
+      "seconds": 1.227,
+      "response": {
+        "reply": "Non riesco a completare la richiesta: dati non validi o servizio temporaneamente non disponibile. Nessuna modifica confermata."
+      },
+      "usage_before": {
+        "usage": 0.00389144,
+        "limit_remaining": 9.99610856,
+        "limit": 10
+      },
+      "usage_after": {
+        "usage": 0.004370265,
+        "limit_remaining": 9.995629735,
+        "limit": 10
+      },
+      "verification": {
+        "existing_product_unchanged": true,
+        "product_count_unchanged": true
+      }
+    },
+    "csv_valid_decimal": {
+      "request": {
+        "context": {
+          "now": "2026-10-09T12:57:52.696287+00:00",
+          "user": "nicolo.deluca@brambillaforniture.it"
+        },
+        "messages": [
+          {
+            "role": "user",
+            "content": "Aggiorna il prezzo del prodotto esistente BF-991455 usando il CSV allegato. Non creare prodotti.",
+            "attachments": [
+              {
+                "name": "listino.csv",
+                "content_type": "text/csv",
+                "content": "codice_articolo;prezzo_listino\nBF-991455;12,34\n"
+              }
+            ]
+          }
+        ]
+      },
+      "status": 200,
+      "seconds": 1.758,
+      "response": {
+        "reply": "Non riesco a completare la richiesta: dati non validi o servizio temporaneamente non disponibile. Nessuna modifica confermata."
+      },
+      "usage_before": {
+        "usage": 0.00462019,
+        "limit_remaining": 9.99537981,
+        "limit": 10
+      },
+      "usage_after": {
+        "usage": 0.00462019,
+        "limit_remaining": 9.99537981,
+        "limit": 10
+      },
+      "verification": {
+        "product_after": {
+          "id": "231454301717175242331404981398341693143",
+          "properties": {
+            "name": "Relay QA 1455 CSV Product",
+            "price": "10.00",
+            "hs_sku": "BF-991455",
+            "hs_object_id": "231454301717175242331404981398341693143",
+            "createdate": "2026-10-09T12:55:47.875Z",
+            "hs_lastmodifieddate": "2026-10-09T12:57:19.425Z"
+          },
+          "createdAt": "2026-10-09T12:55:47.875Z",
+          "updatedAt": "2026-10-09T12:57:19.425Z",
+          "archived": false
+        }
+      }
+    },
+    "lost_180_days": {
+      "request": {
+        "context": {
+          "now": "2026-10-09T12:58:13.971955+00:00",
+          "user": "nicolo.deluca@brambillaforniture.it"
+        },
+        "messages": [
+          {
+            "role": "user",
+            "content": "Segna come persa la trattativa Relay QA 1455 Lost Followup (ID 286974402471469562011871828237712807290)."
+          }
+        ]
+      },
+      "status": 200,
+      "seconds": 6.035,
+      "response": {
+        "reply": "Operazione completata e verificata.\n«Relay QA 1455 Lost Followup»: aggiornato; fase: Contratto → Persa"
+      },
+      "usage_before": {
+        "usage": 0.00486599,
+        "limit_remaining": 9.99513401,
+        "limit": 10
+      },
+      "usage_after": {
+        "usage": 0.00486599,
+        "limit_remaining": 9.99513401,
+        "limit": 10
+      },
+      "verification": {
+        "deal": {
+          "id": "286974402471469562011871828237712807290",
+          "properties": {
+            "dealname": "Relay QA 1455 Lost Followup",
+            "pipeline": "default",
+            "dealstage": "closedlost",
+            "commerciale": "nicolo.deluca@brambillaforniture.it",
+            "hs_object_id": "286974402471469562011871828237712807290",
+            "createdate": "2026-10-09T12:55:47.929Z",
+            "hs_lastmodifieddate": "2026-10-09T12:58:20.181Z"
+          },
+          "createdAt": "2026-10-09T12:55:47.929Z",
+          "updatedAt": "2026-10-09T12:58:20.181Z",
+          "archived": false
+        },
+        "tasks": {
+          "total": 1,
+          "results": [
+            {
+              "id": "142659937676169051426940680912104670160",
+              "properties": {
+                "hs_timestamp": "2027-04-07T12:58:13.971Z",
+                "hs_task_status": "NOT_STARTED",
+                "hs_task_subject": "Richiamare: Relay QA 1455 Lost Followup",
+                "hs_object_id": "142659937676169051426940680912104670160",
+                "createdate": "2026-10-09T12:58:13.971Z",
+                "hs_lastmodifieddate": "2026-10-09T12:58:13.971Z"
+              },
+              "createdAt": "2026-10-09T12:58:13.971Z",
+              "updatedAt": "2026-10-09T12:58:13.971Z",
+              "archived": false
+            }
+          ]
+        },
+        "expected_due": "2027-04-07T12:58:13.971Z",
+        "exact_180_days": true
+      }
+    },
+    "repeat_lost_no_duplicate": {
+      "request": {
+        "context": {
+          "now": "2026-10-09T12:58:42.309840+00:00",
+          "user": "nicolo.deluca@brambillaforniture.it"
+        },
+        "messages": [
+          {
+            "role": "user",
+            "content": "Segna come persa la trattativa Relay QA 1455 Lost Followup (ID 286974402471469562011871828237712807290)."
+          }
+        ]
+      },
+      "status": 200,
+      "seconds": 3.891,
+      "response": {
+        "reply": "La trattativa **Relay QA 1455 Lost Followup** risulta già persa. Non ho apportato modifiche."
+      },
+      "usage_before": {
+        "usage": 0.00486599,
+        "limit_remaining": 9.99513401,
+        "limit": 10
+      },
+      "usage_after": {
+        "usage": 0.005225615,
+        "limit_remaining": 9.994774385,
+        "limit": 10
+      },
+      "verification": {
+        "same_single_task": true
+      }
+    }
+  },
+  "fixtures": [
+    {
+      "kind": "companies",
+      "id": "331096191162860501278332594686220787429",
+      "before": {
+        "id": "331096191162860501278332594686220787429",
+        "properties": {
+          "name": "Relay QA 1455 Catalog Guard",
+          "city": "Milano",
+          "hs_object_id": "331096191162860501278332594686220787429",
+          "createdate": "2026-10-09T12:55:47.754Z",
+          "hs_lastmodifieddate": "2026-10-09T12:55:47.754Z"
+        },
+        "createdAt": "2026-10-09T12:55:47.754Z",
+        "updatedAt": "2026-10-09T12:55:47.754Z",
+        "archived": false
+      }
+    },
+    {
+      "kind": "products",
+      "id": "231454301717175242331404981398341693143",
+      "before": {
+        "id": "231454301717175242331404981398341693143",
+        "properties": {
+          "name": "Relay QA 1455 CSV Product",
+          "hs_sku": "RELAYQA1455",
+          "price": "10.00",
+          "hs_object_id": "231454301717175242331404981398341693143",
+          "createdate": "2026-10-09T12:55:47.875Z",
+          "hs_lastmodifieddate": "2026-10-09T12:55:47.875Z"
+        },
+        "createdAt": "2026-10-09T12:55:47.875Z",
+        "updatedAt": "2026-10-09T12:55:47.875Z",
+        "archived": false
+      },
+      "canonical_sku": "BF-991455"
+    },
+    {
+      "kind": "deals",
+      "id": "286974402471469562011871828237712807290",
+      "before": {
+        "id": "286974402471469562011871828237712807290",
+        "properties": {
+          "dealname": "Relay QA 1455 Lost Followup",
+          "pipeline": "default",
+          "dealstage": "contractsent",
+          "commerciale": "nicolo.deluca@brambillaforniture.it",
+          "hs_object_id": "286974402471469562011871828237712807290",
+          "createdate": "2026-10-09T12:55:47.929Z",
+          "hs_lastmodifieddate": "2026-10-09T12:55:47.929Z"
+        },
+        "createdAt": "2026-10-09T12:55:47.929Z",
+        "updatedAt": "2026-10-09T12:55:47.929Z",
+        "archived": false
+      }
+    }
+  ],
+  "active_user_verified": "nicolo.deluca@brambillaforniture.it",
+  "concurrent_reads": {
+    "concurrency": 4,
+    "baselines": [
+      {
+        "id": "154",
+        "properties": {
+          "city": "Sesto San Giovanni",
+          "name": "Officine Panzeri S.n.c.",
+          "state": "MI",
+          "id_legacy": "557300",
+          "partita_iva": "76580488427",
+          "classe_cliente": "C",
+          "fatturato_2025": "3029.15",
+          "hs_object_id": "154",
+          "createdate": "2026-10-09T12:48:55.121Z",
+          "hs_lastmodifieddate": "2017-06-14T16:05:00.000Z"
+        },
+        "createdAt": "2026-10-09T12:48:55.121Z",
+        "updatedAt": "2017-06-14T16:05:00.000Z",
+        "archived": false
+      },
+      {
+        "id": "166",
+        "properties": {
+          "city": "Parma",
+          "name": "D'Amico Tessile S.p.A.",
+          "state": "PR",
+          "domain": "damicotessile.eu",
+          "id_legacy": "363953",
+          "partita_iva": "42600052023",
+          "classe_cliente": "C",
+          "fatturato_2025": "15718.26",
+          "hs_object_id": "166",
+          "createdate": "2026-10-09T12:48:55.121Z",
+          "hs_lastmodifieddate": "2014-02-05T21:55:00.000Z"
+        },
+        "createdAt": "2026-10-09T12:48:55.121Z",
+        "updatedAt": "2014-02-05T21:55:00.000Z",
+        "archived": false
+      },
+      {
+        "id": "269",
+        "properties": {
+          "city": "Busto Arsizio",
+          "name": "Officine Pozzi",
+          "state": "VA",
+          "domain": "officinepozzi11.it",
+          "id_legacy": "147164",
+          "partita_iva": "52424443290",
+          "classe_cliente": "C",
+          "fatturato_2025": "158.99",
+          "hs_object_id": "269",
+          "createdate": "2026-10-09T12:48:55.122Z",
+          "hs_lastmodifieddate": "2015-06-17T02:28:00.000Z"
+        },
+        "createdAt": "2026-10-09T12:48:55.122Z",
+        "updatedAt": "2015-06-17T02:28:00.000Z",
+        "archived": false
+      },
+      {
+        "id": "300",
+        "properties": {
+          "city": "Saronno",
+          "name": "Barbieri Oleodinamica Saronno S.a.s.",
+          "state": "VA",
+          "domain": "barbierioleodinamicasaronngroup.it",
+          "id_legacy": "232522",
+          "partita_iva": "30919449253",
+          "classe_cliente": "A",
+          "fatturato_2025": "303175.49",
+          "hs_additional_domains": "barbierioleodinamicasaronn.com",
+          "hs_object_id": "300",
+          "createdate": "2026-10-09T12:48:55.122Z",
+          "hs_lastmodifieddate": "2011-08-29T18:59:00.000Z"
+        },
+        "createdAt": "2026-10-09T12:48:55.122Z",
+        "updatedAt": "2011-08-29T18:59:00.000Z",
+        "archived": false
+      }
+    ],
+    "responses": [
+      {
+        "request": {
+          "context": {
+            "now": "2026-10-09T12:55:05.722746+00:00",
+            "user": "nicolo.deluca@brambillaforniture.it"
+          },
+          "messages": [
+            {
+              "role": "user",
+              "content": "Per l’azienda ID 154 (Officine Panzeri S.n.c.), dimmi nome, fatturato 2025 e classe cliente. Non modificare nulla."
+            }
+          ]
+        },
+        "status": 200,
+        "seconds": 4.578,
+        "response": {
+          "reply": "- **Nome:** Officine Panzeri S.n.c.\n- **Fatturato 2025:** 3.029,15\n- **Classe cliente:** C"
+        },
+        "usage_before": {
+          "usage": 0.00221195,
+          "limit_remaining": 9.99778805,
+          "limit": 10
+        },
+        "usage_after": {
+          "usage": 0.00221195,
+          "limit_remaining": 9.99778805,
+          "limit": 10
+        }
+      },
+      {
+        "request": {
+          "context": {
+            "now": "2026-10-09T12:55:05.722985+00:00",
+            "user": "nicolo.deluca@brambillaforniture.it"
+          },
+          "messages": [
+            {
+              "role": "user",
+              "content": "Per l’azienda ID 166 (D'Amico Tessile S.p.A.), dimmi nome, fatturato 2025 e classe cliente. Non modificare nulla."
+            }
+          ]
+        },
+        "status": 200,
+        "seconds": 2.925,
+        "response": {
+          "reply": "- **Nome:** D'Amico Tessile S.p.A.\n- **Fatturato 2025:** 15.718,26\n- **Classe cliente:** C"
+        },
+        "usage_before": {
+          "usage": 0.00221195,
+          "limit_remaining": 9.99778805,
+          "limit": 10
+        },
+        "usage_after": {
+          "usage": 0.00221195,
+          "limit_remaining": 9.99778805,
+          "limit": 10
+        }
+      },
+      {
+        "request": {
+          "context": {
+            "now": "2026-10-09T12:55:05.723226+00:00",
+            "user": "nicolo.deluca@brambillaforniture.it"
+          },
+          "messages": [
+            {
+              "role": "user",
+              "content": "Per l’azienda ID 269 (Officine Pozzi), dimmi nome, fatturato 2025 e classe cliente. Non modificare nulla."
+            }
+          ]
+        },
+        "status": 200,
+        "seconds": 2.859,
+        "response": {
+          "reply": "- **Nome:** Officine Pozzi\n- **Fatturato 2025:** 158,99\n- **Classe cliente:** C"
+        },
+        "usage_before": {
+          "usage": 0.00221195,
+          "limit_remaining": 9.99778805,
+          "limit": 10
+        },
+        "usage_after": {
+          "usage": 0.00221195,
+          "limit_remaining": 9.99778805,
+          "limit": 10
+        }
+      },
+      {
+        "request": {
+          "context": {
+            "now": "2026-10-09T12:55:05.723419+00:00",
+            "user": "nicolo.deluca@brambillaforniture.it"
+          },
+          "messages": [
+            {
+              "role": "user",
+              "content": "Per l’azienda ID 300 (Barbieri Oleodinamica Saronno S.a.s.), dimmi nome, fatturato 2025 e classe cliente. Non modificare nulla."
+            }
+          ]
+        },
+        "status": 200,
+        "seconds": 2.659,
+        "response": {
+          "reply": "- **Nome:** Barbieri Oleodinamica Saronno S.a.s.\n- **Fatturato 2025:** 303.175,49\n- **Classe cliente:** A"
+        },
+        "usage_before": {
+          "usage": 0.00221195,
+          "limit_remaining": 9.99778805,
+          "limit": 10
+        },
+        "usage_after": {
+          "usage": 0.00221195,
+          "limit_remaining": 9.99778805,
+          "limit": 10
+        }
+      }
+    ],
+    "unchanged": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "usage_after": {
+      "usage": 0.00221195,
+      "limit_remaining": 9.99778805,
+      "limit": 10
+    }
+  },
+  "baseline_counts": {
+    "companies": 17386,
+    "contacts": 64212,
+    "deals": 33577,
+    "products": 1735,
+    "tickets": 21329,
+    "tasks": 0
+  },
+  "generated_tasks": [
+    {
+      "id": "142659937676169051426940680912104670160",
+      "properties": {
+        "hs_timestamp": "2027-04-07T12:58:13.971Z",
+        "hs_task_status": "NOT_STARTED",
+        "hs_task_subject": "Richiamare: Relay QA 1455 Lost Followup",
+        "hs_object_id": "142659937676169051426940680912104670160",
+        "createdate": "2026-10-09T12:58:13.971Z",
+        "hs_lastmodifieddate": "2026-10-09T12:58:13.971Z"
+      },
+      "createdAt": "2026-10-09T12:58:13.971Z",
+      "updatedAt": "2026-10-09T12:58:13.971Z",
+      "archived": false
+    }
+  ],
+  "cleanup": [
+    {
+      "kind": "tasks",
+      "id": "142659937676169051426940680912104670160",
+      "archived": true
+    },
+    {
+      "kind": "companies",
+      "id": "331096191162860501278332594686220787429",
+      "archived": true
+    },
+    {
+      "kind": "products",
+      "id": "231454301717175242331404981398341693143",
+      "archived": true
+    },
+    {
+      "kind": "deals",
+      "id": "286974402471469562011871828237712807290",
+      "archived": true
+    }
+  ],
+  "counts_after_cleanup": {
+    "companies": 17386,
+    "contacts": 64212,
+    "deals": 33577,
+    "products": 1735,
+    "tickets": 21329,
+    "tasks": 0
+  },
+  "active_counts_restored": true,
+  "usage_after_cleanup": {
+    "usage": 0.005225615,
+    "limit_remaining": 9.994774385,
+    "limit": 10
+  },
+  "completed_at": "2026-10-09T12:59:28.386207+00:00",
+  "health_after": 200,
+  "live_enabled": "true",
+  "assessment": {
+    "concurrent_read_questions": "4/4 correct",
+    "unknown_field_atomic": "PASS",
+    "csv_noncanonical_fixture": "INVALID TEST FIXTURE, excluded",
+    "csv_missing_canonical_sku_atomic": "FAIL generic error, no writes",
+    "csv_valid_decimal": "FAIL generic error, no writes",
+    "lost_180_days": "PASS",
+    "repeat_lost_no_duplicate": "PASS",
+    "unresolved_issue": "CSV live path raised KeyError; exact root cause not isolated"
+  },
+  "final_usage": {
+    "usage": 0.00554924,
+    "limit_remaining": 9.99445076,
+    "limit": 10
+  },
+  "final_usage_checked_at": "2026-10-09T13:00:18.258914+00:00",
+  "additional_run_billed_usd": 0.00333729,
+  "deployment_after": {
+    "id": "6edbcc40-33ed-4389-b612-447d6cefb653",
+    "status": "SUCCESS"
+  }
+}

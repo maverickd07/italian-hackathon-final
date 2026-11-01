@@ -1,0 +1,7 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sign in · Relay CRM</title><link rel="icon" href="/ui-static/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/ui-static/relay.css"><script src="/ui-static/login.js" defer></script></head>
+<body class="login-page"><main class="login-card"><a class="brand" href="/login"><span class="mark">R</span> Relay CRM</a><div class="eyebrow">YOUR PRIVATE WORKSPACE</div><h1>Welcome back.</h1><p>Sign in with your CRM token to access your customers, pipeline and assistant.</p>
+{% if expired %}<div class="login-notice" role="status">Your session has expired. Please sign in again.</div>{% endif %}
+{% if error %}<div class="login-error" role="alert">{{error}}</div>{% endif %}
+<form method="post" action="/login" id="login-form"><input type="hidden" name="csrf" value="{{csrf}}"><input type="hidden" name="next" value="{{next}}"><label for="login-token">CRM token</label><input id="login-token" name="token" type="password" autocomplete="off" required maxlength="256" placeholder="Enter your CRM token" autofocus><button type="submit">Sign in →</button></form>
+<p class="login-footnote">Your token is checked by the server and is never stored in your browser. Business identity selection becomes available after sign-in; it does not authenticate an employee.</p></main></body></html>

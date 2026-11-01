@@ -1,0 +1,155 @@
+{
+  "deployment": "fa1d5842-3e75-4ff8-8eb0-dea915f1b5db",
+  "started_at": "2026-10-09T13:10:05.260831+00:00",
+  "initial_usage": {
+    "usage": 0.00582535,
+    "limit_remaining": 9.99417465,
+    "limit": 10
+  },
+  "active_user_verified": "nicolo.deluca@brambillaforniture.it",
+  "scenarios": [
+    {
+      "name": "valid_decimal_csv",
+      "request": {
+        "context": {
+          "now": "2026-10-09T13:10:05.471799+00:00",
+          "user": "nicolo.deluca@brambillaforniture.it"
+        },
+        "messages": [
+          {
+            "role": "user",
+            "content": "Aggiorna il prezzo del solo prodotto indicato nel CSV allegato. È una modifica autorizzata e confermata. Non creare prodotti.",
+            "attachments": [
+              {
+                "name": "listino.csv",
+                "content_type": "text/csv",
+                "content": "codice_articolo;prezzo_listino\nBF-991507;12,34\n"
+              }
+            ]
+          }
+        ]
+      },
+      "status": 200,
+      "seconds": 3.361,
+      "response": {
+        "reply": "Operazione completata e verificata.\n«RELAY QA disposable CSV 1507»: aggiornato; codice articolo: BF-991507 → BF-991507; prezzo: 10,00 → 12,34"
+      },
+      "before": {
+        "id": "89384028998545252595496345855254630390",
+        "properties": {
+          "name": "RELAY QA disposable CSV 1507",
+          "price": "10.00",
+          "hs_sku": "BF-991507",
+          "hs_object_id": "89384028998545252595496345855254630390",
+          "createdate": "2026-10-09T13:10:05.306Z",
+          "hs_lastmodifieddate": "2026-10-09T13:10:05.306Z"
+        },
+        "createdAt": "2026-10-09T13:10:05.306Z",
+        "updatedAt": "2026-10-09T13:10:05.306Z",
+        "archived": false
+      },
+      "after": {
+        "id": "89384028998545252595496345855254630390",
+        "properties": {
+          "name": "RELAY QA disposable CSV 1507",
+          "price": "12.34",
+          "hs_sku": "BF-991507",
+          "hs_object_id": "89384028998545252595496345855254630390",
+          "createdate": "2026-10-09T13:10:05.306Z",
+          "hs_lastmodifieddate": "2026-10-09T13:10:08.782Z"
+        },
+        "createdAt": "2026-10-09T13:10:05.306Z",
+        "updatedAt": "2026-10-09T13:10:08.782Z",
+        "archived": false
+      },
+      "usage_before": {
+        "usage": 0.00582535,
+        "limit_remaining": 9.99417465,
+        "limit": 10
+      },
+      "usage_after": {
+        "usage": 0.00582535,
+        "limit_remaining": 9.99417465,
+        "limit": 10
+      },
+      "pass": true,
+      "missing_sku_count": 0
+    },
+    {
+      "name": "missing_sku_atomicity",
+      "request": {
+        "context": {
+          "now": "2026-10-09T13:10:09.137084+00:00",
+          "user": "nicolo.deluca@brambillaforniture.it"
+        },
+        "messages": [
+          {
+            "role": "user",
+            "content": "Applica tutto il CSV allegato in una sola operazione atomica. Non creare prodotti; se un codice non esiste, rifiuta l’intero aggiornamento senza cambiare alcun prezzo. Confermo la richiesta.",
+            "attachments": [
+              {
+                "name": "listino.csv",
+                "content_type": "text/csv",
+                "content": "codice_articolo;prezzo_listino\nBF-991507;18,50\nBF-991508;99,00\n"
+              }
+            ]
+          }
+        ]
+      },
+      "status": 200,
+      "seconds": 2.826,
+      "response": {
+        "reply": "Il record BF-991508 non esiste. Vuoi crearlo? Nessuna modifica eseguita."
+      },
+      "before": {
+        "id": "89384028998545252595496345855254630390",
+        "properties": {
+          "name": "RELAY QA disposable CSV 1507",
+          "price": "12.34",
+          "hs_sku": "BF-991507",
+          "hs_object_id": "89384028998545252595496345855254630390",
+          "createdate": "2026-10-09T13:10:05.306Z",
+          "hs_lastmodifieddate": "2026-10-09T13:10:08.782Z"
+        },
+        "createdAt": "2026-10-09T13:10:05.306Z",
+        "updatedAt": "2026-10-09T13:10:08.782Z",
+        "archived": false
+      },
+      "after": {
+        "id": "89384028998545252595496345855254630390",
+        "properties": {
+          "name": "RELAY QA disposable CSV 1507",
+          "price": "12.34",
+          "hs_sku": "BF-991507",
+          "hs_object_id": "89384028998545252595496345855254630390",
+          "createdate": "2026-10-09T13:10:05.306Z",
+          "hs_lastmodifieddate": "2026-10-09T13:10:08.782Z"
+        },
+        "createdAt": "2026-10-09T13:10:05.306Z",
+        "updatedAt": "2026-10-09T13:10:08.782Z",
+        "archived": false
+      },
+      "usage_before": {
+        "usage": 0.00582535,
+        "limit_remaining": 9.99417465,
+        "limit": 10
+      },
+      "usage_after": {
+        "usage": 0.00582535,
+        "limit_remaining": 9.99417465,
+        "limit": 10
+      },
+      "pass": true,
+      "missing_sku_count": 0
+    }
+  ],
+  "fixture_id": "89384028998545252595496345855254630390",
+  "cleanup_status": 204,
+  "fixture_not_active": true,
+  "final_usage": {
+    "usage": 0.00582535,
+    "limit_remaining": 9.99417465,
+    "limit": 10
+  },
+  "health": 200
+}

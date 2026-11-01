@@ -1,0 +1,17 @@
+[project]
+name = "relay-crm"
+version = "0.1.0"
+description = "Persistent CRM object API"
+requires-python = ">=3.12,<3.13"
+dependencies = ["jinja2>=3.1,<4", "fastapi>=0.115,<1", "uvicorn[standard]>=0.30,<1", "sqlalchemy>=2.0,<3", "psycopg[binary]>=3.2,<4"]
+
+[dependency-groups]
+dev = ["pytest>=8,<10", "httpx>=0.27,<1", "ruff>=0.11,<1"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100

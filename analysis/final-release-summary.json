@@ -1,0 +1,36 @@
+{
+  "application_commit": "95bc5f5",
+  "deployment": "feec912b-c7b0-40e5-8648-3eaa217bc17e",
+  "restart_verified": true,
+  "full_fingerprints_unchanged_across_restart": true,
+  "original_business_data_unchanged": true,
+  "active_objects": 539204,
+  "business_associations": 1393960,
+  "dormant_members": 954,
+  "archived_acceptance_records": 5,
+  "before_restart_load": {
+    "concurrency": 20,
+    "requests": 200,
+    "statuses": {
+      "200": 200
+    },
+    "p95_seconds": 0.1291844580009638,
+    "p50_seconds": 0.05550679199768638,
+    "max_seconds": 0.18438070799675188
+  },
+  "after_restart_load": {
+    "concurrency": 20,
+    "requests": 200,
+    "statuses": {
+      "200": 200
+    },
+    "p95_seconds": 0.12986787499903585,
+    "p50_seconds": 0.04914881250078906,
+    "max_seconds": 0.1471064170000318
+  },
+  "model_called": false,
+  "live_enabled": false,
+  "temporary_ssh_key_revoked": true,
+  "submission_status": "deploy URL registered; choice sheet scheduled for 15:00, not yet submitted",
+  "automation_id": "15-00"
+}

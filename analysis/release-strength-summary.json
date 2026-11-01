@@ -1,0 +1,105 @@
+{
+  "deployment": "feec912b-c7b0-40e5-8648-3eaa217bc17e",
+  "application_commit": "95bc5f5",
+  "model_called": false,
+  "production_business_writes": false,
+  "local_suites": {
+    "sqlite": {
+      "tests": "4",
+      "errors": "0",
+      "failures": "0",
+      "time": "1.349"
+    },
+    "postgres": {
+      "tests": "4",
+      "errors": "0",
+      "failures": "0",
+      "time": "2.296"
+    }
+  },
+  "scenarios": {
+    "mixed_version_stage_updates": {
+      "operations": 60,
+      "concurrency": 20,
+      "fields_preserved": true,
+      "one_ticket_and_one_task": true
+    },
+    "mixed_version_email_upsert": {
+      "operations": 80,
+      "concurrency": 20,
+      "created_records": 1,
+      "fields_preserved": true
+    },
+    "atomic_failure_storm": {
+      "failed_batches": 40,
+      "concurrency": 12,
+      "no_residual_writes_or_automation_claims": true
+    },
+    "assistant_fake_only": {
+      "conversations": 80,
+      "concurrency": 8,
+      "untouched_sentinel_preserved": true,
+      "no_cross_writes": true
+    }
+  },
+  "deployed_candidate_files_unchanged": true,
+  "online": {
+    "deployment": "feec912b-c7b0-40e5-8648-3eaa217bc17e",
+    "model_called": false,
+    "production_business_writes": false,
+    "phases": {
+      "single_record_endurance": {
+        "concurrency": 20,
+        "planned_requests": 1000,
+        "completed_requests": 1000,
+        "groups": {
+          "record": {
+            "requests": 1000,
+            "statuses": {
+              "200": 1000
+            },
+            "p50_seconds": 0.049911646001419285,
+            "p95_seconds": 0.1316383749981469,
+            "max_seconds": 0.8209053329992457
+          }
+        }
+      },
+      "mixed_read_load": {
+        "concurrency": 20,
+        "planned_requests": 300,
+        "completed_requests": 300,
+        "groups": {
+          "pagination": {
+            "requests": 100,
+            "statuses": {
+              "200": 100
+            },
+            "p50_seconds": 0.06209618749926449,
+            "p95_seconds": 0.13936187500075903,
+            "max_seconds": 0.15386520799802383
+          },
+          "record": {
+            "requests": 100,
+            "statuses": {
+              "200": 100
+            },
+            "p50_seconds": 0.04932777099929808,
+            "p95_seconds": 0.12081449999823235,
+            "max_seconds": 0.14555408399974112
+          },
+          "search": {
+            "requests": 100,
+            "statuses": {
+              "200": 100
+            },
+            "p50_seconds": 0.06744372950015531,
+            "p95_seconds": 0.1355430419971526,
+            "max_seconds": 0.16252862499823095
+          }
+        }
+      }
+    },
+    "active_totals_unchanged": true,
+    "health_after": 200
+  }
+}

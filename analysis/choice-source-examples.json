@@ -1,0 +1,82 @@
+{
+  "monthly": {
+    "id_opportunita": "17577703",
+    "titolo": "Fornitura metalli Fratelli Grasso",
+    "id_azienda": "425241",
+    "contatti": "7968879, 4728622",
+    "importo": "51.315,91 mensili",
+    "valuta": "Euro",
+    "pipeline": "RINNOVI",
+    "fase": "RINNOVATO",
+    "data_chiusura": "",
+    "id_commerciale": "",
+    "cancellato": "NO",
+    "ultima_modifica": "05/10/2014 17:21:00"
+  },
+  "missing_price": {
+    "id_riga": "2112705146",
+    "id_opportunita": "60920941",
+    "codice_articolo": "60141",
+    "descrizione": "Disco da taglio inox 230 mm",
+    "quantita": "5",
+    "prezzo_unitario": "",
+    "sconto": "25 %"
+  },
+  "rehire": [
+    {
+      "id_utente": "U22",
+      "nome": "Niccolò",
+      "cognome": "Bassi",
+      "email": "niccolo.bassi@brambillaforniture.it",
+      "ruolo": "Commerciale",
+      "responsabile": "U03",
+      "attivo": "NO"
+    },
+    {
+      "id_utente": "U84",
+      "nome": "Niccolò",
+      "cognome": "Bassi",
+      "email": "n.bassi@brambillaforniture.it",
+      "ruolo": "Commerciale",
+      "responsabile": "U02",
+      "attivo": "s"
+    }
+  ],
+  "missing_close": {
+    "id_opportunita": "81511329",
+    "titolo": "Fornitura elettroforniture Bruno Carpenteria",
+    "id_azienda": "905329",
+    "contatti": "",
+    "importo": "EUR 80.118,83",
+    "valuta": "",
+    "pipeline": "vendite ",
+    "fase": "07",
+    "data_chiusura": "",
+    "id_commerciale": "U38",
+    "cancellato": "",
+    "ultima_modifica": "21/05/2020 15:54:28"
+  },
+  "matching_history": [
+    {
+      "id_opportunita": "81511329",
+      "fase_precedente": "05 - Contratto",
+      "fase_nuova": "Persa",
+      "data_cambio": "20/11/2019 13:15:28",
+      "id_utente": "U38"
+    }
+  ],
+  "contradictory_ticket": {
+    "id_ticket": "981012",
+    "oggetto": "Ritardo nella consegna - ordine 33775",
+    "descrizione": "Da: cinzia.pagani@outlook.it\nChiede la consegna entro venerdì.",
+    "stato": "Chiuso",
+    "priorita": "",
+    "id_contatto": "",
+    "id_azienda": "906569",
+    "aperto_il": "2020-03-10 17:24:40",
+    "chiuso_il": "2020-03-08 09:32:49",
+    "id_utente": "U57",
+    "cancellato": "N",
+    "ultima_modifica": "16/03/2020 19:25:40"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "project_id": "827b9ca4-9440-45c1-80fb-7437d570e1aa",
+  "project_name": "final-weiyu-chen2-17fe61",
+  "CRM_TOKEN_present": true,
+  "OPENROUTER_API_KEY_present": true,
+  "ASSISTANT_LIVE_ENABLED": "false",
+  "UI_LOCAL_PREVIEW": null,
+  "claude_variables": [],
+  "api_database_equals_postgres_service_database": true,
+  "postgresql": true,
+  "entrypoint": "app.main:app",
+  "services": [
+    "api",
+    "Postgres"
+  ],
+  "DATABASE_URL_reference_matches_required": true,
+  "variable_reference_verification_documentation": "https://docs.railway.com/integrations/api/manage-variables"
+}

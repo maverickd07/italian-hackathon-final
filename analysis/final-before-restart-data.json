@@ -1,0 +1,59 @@
+{
+  "deployment": "feec912b-c7b0-40e5-8648-3eaa217bc17e",
+  "active_counts": {
+    "calls": 107761,
+    "companies": 17734,
+    "contacts": 64212,
+    "deals": 33577,
+    "emails": 72232,
+    "line_items": 41014,
+    "meetings": 36200,
+    "notes": 143410,
+    "products": 1735,
+    "tickets": 21329
+  },
+  "archived_count": 5,
+  "fingerprints": {
+    "objects": {
+      "count": 539209,
+      "sha256": "dbfa3f29a230794a9811eac918ce648dbf1e27f862cba17093b7a7773cd07cb0"
+    },
+    "associations": {
+      "count": 1393962,
+      "sha256": "5bb6a88dc0caec92bb6f0d111966b776ef6f6fa75b576ceec04394227f46cdbc"
+    },
+    "list_members": {
+      "count": 954,
+      "sha256": "7c413c155c674b1ab400b43d2e51dd5810c48af5e20183eac6156b80d4f929b6"
+    }
+  },
+  "business_fingerprints": {
+    "objects": {
+      "count": 539204,
+      "sha256": "120b437a36bf9f7f04229a0ad773c5113342d944949bb3459a2569b795c2c679"
+    },
+    "associations": {
+      "count": 1393960,
+      "sha256": "0209d38ede3c1d6b49895cef695ac9be90293c4c846efd9246944b10e495f68f"
+    },
+    "list_members": {
+      "count": 954,
+      "sha256": "7c413c155c674b1ab400b43d2e51dd5810c48af5e20183eac6156b80d4f929b6"
+    }
+  },
+  "excluded_test_ids": [
+    "144752176685425427206008566671924511590",
+    "176527144710044138478594314514387478442",
+    "178464692151264258765693717536314115845",
+    "204416343248240174934944714421451226755",
+    "220752724630126958501778513825792624337"
+  ],
+  "duplicate_active_emails": 0,
+  "user_metadata_fields": {
+    "users": 85,
+    "with_role": 0,
+    "with_reporting_line": 0
+  },
+  "seconds": 17.072,
+  "pid1_start": "57382789"
+}

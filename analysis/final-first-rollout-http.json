@@ -1,0 +1,135 @@
+{
+  "deployment": "ac300ac2-437f-4972-9244-6d47911c6e3c",
+  "commit": "44030f2",
+  "model_called": false,
+  "health": {
+    "status": "ok",
+    "version": "2026-09",
+    "ui": {
+      "today": "/",
+      "assistant": "/assistant",
+      "companies": "/companies",
+      "contacts": "/contacts",
+      "deals": "/deals",
+      "tickets": "/tickets",
+      "dormant": "/dormant-customers"
+    }
+  },
+  "auth": {
+    "/crm/objects/2026-09/companies": {
+      "missing": 401,
+      "wrong": 401,
+      "valid": 200
+    },
+    "/crm/v3/objects/contacts": {
+      "missing": 401,
+      "wrong": 401,
+      "valid": 200
+    },
+    "/openapi.json": {
+      "missing": 401,
+      "wrong": 401,
+      "valid": 200
+    }
+  },
+  "company_example_id": "1",
+  "pages": {
+    "/": {
+      "status": 200,
+      "seconds": 0.0981,
+      "english_shell": true
+    },
+    "/assistant": {
+      "status": 200,
+      "seconds": 0.0422,
+      "english_shell": true
+    },
+    "/companies": {
+      "status": 200,
+      "seconds": 0.1796,
+      "english_shell": true
+    },
+    "/contacts": {
+      "status": 200,
+      "seconds": 0.057,
+      "english_shell": true
+    },
+    "/deals": {
+      "status": 200,
+      "seconds": 0.1486,
+      "english_shell": true
+    },
+    "/tickets": {
+      "status": 200,
+      "seconds": 0.0766,
+      "english_shell": true
+    },
+    "/dormant-customers": {
+      "status": 200,
+      "seconds": 0.2819,
+      "english_shell": true
+    },
+    "/companies/1": {
+      "status": 200,
+      "seconds": 0.0615,
+      "english_shell": true
+    },
+    "/companies/1?tab=deals": {
+      "status": 200,
+      "seconds": 0.0485,
+      "english_shell": true
+    },
+    "/companies/1?tab=activity": {
+      "status": 200,
+      "seconds": 0.0599,
+      "english_shell": true
+    }
+  },
+  "browser_session": {
+    "login": 303,
+    "cookie_api_rejected": 401,
+    "csrf_required": true
+  },
+  "totals": {
+    "calls": 107761,
+    "companies": 17734,
+    "contacts": 64212,
+    "deals": 33577,
+    "emails": 72232,
+    "line_items": 41014,
+    "meetings": 36200,
+    "notes": 143410,
+    "products": 1735,
+    "tickets": 21329
+  },
+  "company_pagination": {
+    "records": 17734,
+    "pages": 178,
+    "no_duplicates": true
+  },
+  "read_load": {
+    "concurrency": 20,
+    "requests": 200,
+    "statuses": {
+      "200": 200
+    },
+    "p95_seconds": 0.11852937499861582,
+    "p50_seconds": 0.05132520849838329,
+    "max_seconds": 0.1261777500003518
+  },
+  "test_records": [
+    {
+      "kind": "deals",
+      "id": "176527144710044138478594314514387478442",
+      "archived": true
+    },
+    {
+      "kind": "contacts",
+      "id": "220752724630126958501778513825792624337",
+      "archived": true
+    }
+  ],
+  "acceptance_passed": false,
+  "failure": "Browser HTTPS Origin rejected behind Railway HTTP proxy",
+  "test_records_archived": true
+}

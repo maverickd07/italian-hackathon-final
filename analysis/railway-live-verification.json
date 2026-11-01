@@ -1,0 +1,160 @@
+{
+  "auth": {
+    "/health:missing": 200,
+    "/health:wrong": 200,
+    "/health:valid": 200,
+    "/companies:missing": 401,
+    "/companies:wrong": 401,
+    "/companies:valid": 200,
+    "/ui-static/relay.js:missing": 401,
+    "/ui-static/relay.js:wrong": 401,
+    "/ui-static/relay.js:valid": 200,
+    "/crm/v3/objects/contacts:missing": 401,
+    "/crm/v3/objects/contacts:wrong": 401,
+    "/crm/v3/objects/contacts:valid": 200
+  },
+  "migration_http_status": 204,
+  "migration_seconds": 87.564,
+  "archive_sha256": "32313f25e78bee6b668f26e1c4e1b04ffdb15f1554880ce5fd52e9c8ff660c57",
+  "source_transport": "SSH private upload; loopback HTTP archive download; public POST /__migrate",
+  "model_called": false,
+  "initial_run": {
+    "migration_seconds": 299.586,
+    "migration_http_status": 204,
+    "read_load": {
+      "requests": 200,
+      "concurrency": 20,
+      "statuses": {
+        "200": 200
+      },
+      "p50_seconds": 0.07609199999999999,
+      "p95_seconds": 0.159679,
+      "max_seconds": 0.178044,
+      "passes": true
+    },
+    "company_pagination": {
+      "records": 17734,
+      "pages": 178,
+      "no_duplicates": true
+    }
+  },
+  "reset": {
+    "status": 204,
+    "seconds": 0.646,
+    "guard": "fresh complete fingerprints unchanged from verification-only import; future source timestamps preserved"
+  },
+  "redeploy_durability": {
+    "passed": true,
+    "initial_fingerprints": {
+      "associations": {
+        "count": 1393960,
+        "sha256": "0209d38ede3c1d6b49895cef695ac9be90293c4c846efd9246944b10e495f68f"
+      },
+      "list_members": {
+        "count": 954,
+        "sha256": "7c413c155c674b1ab400b43d2e51dd5810c48af5e20183eac6156b80d4f929b6"
+      },
+      "objects": {
+        "count": 539204,
+        "sha256": "feeb676353bcf9ed3afd33dd0c19cbb6628b017a1ba7a6d7ef68ddb7a0b7701b"
+      }
+    },
+    "redeployed_fingerprints": {
+      "associations": {
+        "count": 1393960,
+        "sha256": "0209d38ede3c1d6b49895cef695ac9be90293c4c846efd9246944b10e495f68f"
+      },
+      "list_members": {
+        "count": 954,
+        "sha256": "7c413c155c674b1ab400b43d2e51dd5810c48af5e20183eac6156b80d4f929b6"
+      },
+      "objects": {
+        "count": 539204,
+        "sha256": "feeb676353bcf9ed3afd33dd0c19cbb6628b017a1ba7a6d7ef68ddb7a0b7701b"
+      }
+    }
+  },
+  "deployment": "b8109d36-be1b-4de6-a42c-81de06e87662",
+  "source_files_matched": 37,
+  "restart_durability": {
+    "passed": true,
+    "process_restarted": true,
+    "counts": {
+      "calls": 107761,
+      "companies": 17734,
+      "contacts": 64212,
+      "deals": 33577,
+      "emails": 72232,
+      "line_items": 41014,
+      "meetings": 36200,
+      "notes": 143410,
+      "products": 1735,
+      "tickets": 21329
+    },
+    "fingerprints_before": {
+      "associations": {
+        "count": 1393960,
+        "sha256": "0209d38ede3c1d6b49895cef695ac9be90293c4c846efd9246944b10e495f68f"
+      },
+      "list_members": {
+        "count": 954,
+        "sha256": "7c413c155c674b1ab400b43d2e51dd5810c48af5e20183eac6156b80d4f929b6"
+      },
+      "objects": {
+        "count": 539204,
+        "sha256": "120b437a36bf9f7f04229a0ad773c5113342d944949bb3459a2569b795c2c679"
+      }
+    },
+    "fingerprints_after": {
+      "associations": {
+        "count": 1393960,
+        "sha256": "0209d38ede3c1d6b49895cef695ac9be90293c4c846efd9246944b10e495f68f"
+      },
+      "list_members": {
+        "count": 954,
+        "sha256": "7c413c155c674b1ab400b43d2e51dd5810c48af5e20183eac6156b80d4f929b6"
+      },
+      "objects": {
+        "count": 539204,
+        "sha256": "120b437a36bf9f7f04229a0ad773c5113342d944949bb3459a2569b795c2c679"
+      }
+    },
+    "duplicate_active_emails": 0
+  },
+  "search_totals": {
+    "companies": 17734,
+    "contacts": 64212,
+    "products": 1735,
+    "deals": 33577,
+    "line_items": 41014,
+    "tickets": 21329,
+    "notes": 143410,
+    "meetings": 36200,
+    "calls": 107761,
+    "emails": 72232
+  },
+  "company_pagination": {
+    "records": 17734,
+    "pages": 178,
+    "no_duplicates": true
+  },
+  "read_load": {
+    "requests": 200,
+    "concurrency": 20,
+    "statuses": {
+      "200": 200
+    },
+    "p50_seconds": 0.0645925,
+    "p95_seconds": 0.16612,
+    "max_seconds": 0.210069,
+    "passes": true
+  },
+  "deployed_source_matches_tested_snapshot": true,
+  "tests_at_deployment": {
+    "sqlite": 137,
+    "postgresql": 137
+  },
+  "later_local_ui_assistant_changes_included": false,
+  "temporary_ssh_key_revoked": true,
+  "temporary_remote_source_removed": true
+}

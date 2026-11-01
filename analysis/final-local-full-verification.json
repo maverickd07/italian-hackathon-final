@@ -1,0 +1,336 @@
+{
+  "raw_audit_seconds": 10.136,
+  "model_called": false,
+  "counts": {
+    "companies": 17734,
+    "contacts": 64212,
+    "products": 1735,
+    "deals": 33577,
+    "line_items": 41014,
+    "tickets": 21329,
+    "notes": 143410,
+    "meetings": 36200,
+    "calls": 107761,
+    "emails": 72232
+  },
+  "migration_seconds_excluding_network": 53.634,
+  "company_revenue_and_class_checked": 17734,
+  "contact_company_associations_checked": 64212,
+  "quote_deal_totals_checked": 11659,
+  "dormant_members_checked": 954,
+  "associations": 1393960,
+  "migration_diagnostics": {
+    "cases": [
+      {
+        "file": "contatti",
+        "count": 3296,
+        "field": "email",
+        "reason": "invalid_email"
+      }
+    ],
+    "total": 3296,
+    "samples": [
+      {
+        "row": 67,
+        "file": "contatti",
+        "field": "email",
+        "reason": "invalid_email"
+      },
+      {
+        "row": 76,
+        "file": "contatti",
+        "field": "email",
+        "reason": "invalid_email"
+      },
+      {
+        "row": 83,
+        "file": "contatti",
+        "field": "email",
+        "reason": "invalid_email"
+      },
+      {
+        "row": 87,
+        "file": "contatti",
+        "field": "email",
+        "reason": "invalid_email"
+      },
+      {
+        "row": 96,
+        "file": "contatti",
+        "field": "email",
+        "reason": "invalid_email"
+      },
+      {
+        "row": 112,
+        "file": "contatti",
+        "field": "email",
+        "reason": "invalid_email"
+      },
+      {
+        "row": 117,
+        "file": "contatti",
+        "field": "email",
+        "reason": "invalid_email"
+      },
+      {
+        "row": 123,
+        "file": "contatti",
+        "field": "email",
+        "reason": "invalid_email"
+      },
+      {
+        "row": 136,
+        "file": "contatti",
+        "field": "email",
+        "reason": "invalid_email"
+      },
+      {
+        "row": 149,
+        "file": "contatti",
+        "field": "email",
+        "reason": "invalid_email"
+      },
+      {
+        "row": 189,
+        "file": "contatti",
+        "field": "email",
+        "reason": "invalid_email"
+      },
+      {
+        "row": 204,
+        "file": "contatti",
+        "field": "email",
+        "reason": "invalid_email"
+      },
+      {
+        "row": 214,
+        "file": "contatti",
+        "field": "email",
+        "reason": "invalid_email"
+      },
+      {
+        "row": 305,
+        "file": "contatti",
+        "field": "email",
+        "reason": "invalid_email"
+      },
+      {
+        "row": 307,
+        "file": "contatti",
+        "field": "email",
+        "reason": "invalid_email"
+      },
+      {
+        "row": 335,
+        "file": "contatti",
+        "field": "email",
+        "reason": "invalid_email"
+      },
+      {
+        "row": 342,
+        "file": "contatti",
+        "field": "email",
+        "reason": "invalid_email"
+      },
+      {
+        "row": 351,
+        "file": "contatti",
+        "field": "email",
+        "reason": "invalid_email"
+      },
+      {
+        "row": 365,
+        "file": "contatti",
+        "field": "email",
+        "reason": "invalid_email"
+      },
+      {
+        "row": 372,
+        "file": "contatti",
+        "field": "email",
+        "reason": "invalid_email"
+      },
+      {
+        "row": 393,
+        "file": "contatti",
+        "field": "email",
+        "reason": "invalid_email"
+      },
+      {
+        "row": 409,
+        "file": "contatti",
+        "field": "email",
+        "reason": "invalid_email"
+      },
+      {
+        "row": 418,
+        "file": "contatti",
+        "field": "email",
+        "reason": "invalid_email"
+      },
+      {
+        "row": 421,
+        "file": "contatti",
+        "field": "email",
+        "reason": "invalid_email"
+      },
+      {
+        "row": 431,
+        "file": "contatti",
+        "field": "email",
+        "reason": "invalid_email"
+      },
+      {
+        "row": 466,
+        "file": "contatti",
+        "field": "email",
+        "reason": "invalid_email"
+      },
+      {
+        "row": 473,
+        "file": "contatti",
+        "field": "email",
+        "reason": "invalid_email"
+      },
+      {
+        "row": 522,
+        "file": "contatti",
+        "field": "email",
+        "reason": "invalid_email"
+      },
+      {
+        "row": 533,
+        "file": "contatti",
+        "field": "email",
+        "reason": "invalid_email"
+      },
+      {
+        "row": 537,
+        "file": "contatti",
+        "field": "email",
+        "reason": "invalid_email"
+      },
+      {
+        "row": 542,
+        "file": "contatti",
+        "field": "email",
+        "reason": "invalid_email"
+      },
+      {
+        "row": 567,
+        "file": "contatti",
+        "field": "email",
+        "reason": "invalid_email"
+      },
+      {
+        "row": 568,
+        "file": "contatti",
+        "field": "email",
+        "reason": "invalid_email"
+      },
+      {
+        "row": 574,
+        "file": "contatti",
+        "field": "email",
+        "reason": "invalid_email"
+      },
+      {
+        "row": 580,
+        "file": "contatti",
+        "field": "email",
+        "reason": "invalid_email"
+      },
+      {
+        "row": 616,
+        "file": "contatti",
+        "field": "email",
+        "reason": "invalid_email"
+      },
+      {
+        "row": 650,
+        "file": "contatti",
+        "field": "email",
+        "reason": "invalid_email"
+      },
+      {
+        "row": 710,
+        "file": "contatti",
+        "field": "email",
+        "reason": "invalid_email"
+      },
+      {
+        "row": 747,
+        "file": "contatti",
+        "field": "email",
+        "reason": "invalid_email"
+      },
+      {
+        "row": 780,
+        "file": "contatti",
+        "field": "email",
+        "reason": "invalid_email"
+      },
+      {
+        "row": 787,
+        "file": "contatti",
+        "field": "email",
+        "reason": "invalid_email"
+      },
+      {
+        "row": 799,
+        "file": "contatti",
+        "field": "email",
+        "reason": "invalid_email"
+      },
+      {
+        "row": 800,
+        "file": "contatti",
+        "field": "email",
+        "reason": "invalid_email"
+      },
+      {
+        "row": 803,
+        "file": "contatti",
+        "field": "email",
+        "reason": "invalid_email"
+      },
+      {
+        "row": 821,
+        "file": "contatti",
+        "field": "email",
+        "reason": "invalid_email"
+      },
+      {
+        "row": 827,
+        "file": "contatti",
+        "field": "email",
+        "reason": "invalid_email"
+      },
+      {
+        "row": 893,
+        "file": "contatti",
+        "field": "email",
+        "reason": "invalid_email"
+      },
+      {
+        "row": 1021,
+        "file": "contatti",
+        "field": "email",
+        "reason": "invalid_email"
+      },
+      {
+        "row": 1062,
+        "file": "contatti",
+        "field": "email",
+        "reason": "invalid_email"
+      },
+      {
+        "row": 1080,
+        "file": "contatti",
+        "field": "email",
+        "reason": "invalid_email"
+      }
+    ]
+  },
+  "assertions_passed": true
+}

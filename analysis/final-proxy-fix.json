@@ -1,0 +1,18 @@
+{
+  "reason": "Real browser Origin is HTTPS while Railway forwards HTTP internally",
+  "fix": "Use configured Railway public domain for same-origin checks; do not trust arbitrary forwarded headers",
+  "tests": {
+    "sqlite": {
+      "tests": "13",
+      "errors": "0",
+      "failures": "0",
+      "time": "0.779"
+    },
+    "postgres": {
+      "tests": "13",
+      "errors": "0",
+      "failures": "0",
+      "time": "2.346"
+    }
+  }
+}

@@ -1,0 +1,832 @@
+{
+  "files": {
+    "attivita": {
+      "rows": 370316,
+      "active": 359603,
+      "deleted": 10713,
+      "columns": [
+        "id_attivita",
+        "tipo",
+        "data",
+        "testo",
+        "id_contatto",
+        "id_opportunita",
+        "id_utente",
+        "cancellato"
+      ],
+      "sha256": "173e3395333467d1b4c117e910676dff24827b5adc7d3b63f5ca0f1eadd38c3c",
+      "malformed_rows": 0,
+      "blank_cells": {
+        "id_attivita": 0,
+        "tipo": 0,
+        "data": 0,
+        "testo": 0,
+        "id_contatto": 18323,
+        "id_opportunita": 184847,
+        "id_utente": 0,
+        "cancellato": 180023
+      },
+      "flags": {
+        "": 180023,
+        "NO": 60092,
+        "0": 59627,
+        "S": 3570,
+        "N": 59861,
+        "s": 1777,
+        "1": 1809,
+        "SI": 1754,
+        "Sì": 1803
+      },
+      "multiline_rows": 192581,
+      "mojibake_marker_rows": 0,
+      "duplicate_primary_ids": 0
+    },
+    "aziende": {
+      "rows": 20497,
+      "active": 19698,
+      "deleted": 799,
+      "columns": [
+        "id_azienda",
+        "ragione_sociale",
+        "sito_web",
+        "note",
+        "citta",
+        "provincia",
+        "cancellato",
+        "ultima_modifica"
+      ],
+      "sha256": "eb95fab540ca0f4f9738364225893aa51ffb0274206f0b3d8350f4a80bac754b",
+      "malformed_rows": 0,
+      "blank_cells": {
+        "id_azienda": 0,
+        "ragione_sociale": 0,
+        "sito_web": 3216,
+        "note": 2398,
+        "citta": 641,
+        "provincia": 641,
+        "cancellato": 9867,
+        "ultima_modifica": 0
+      },
+      "flags": {
+        "0": 3327,
+        "N": 3241,
+        "NO": 3263,
+        "": 9867,
+        "s": 162,
+        "S": 249,
+        "Sì": 144,
+        "1": 133,
+        "SI": 111
+      },
+      "multiline_rows": 0,
+      "mojibake_marker_rows": 1219,
+      "duplicate_primary_ids": 0
+    },
+    "contatti": {
+      "rows": 73391,
+      "active": 70589,
+      "deleted": 2802,
+      "columns": [
+        "id_contatto",
+        "nome",
+        "cognome",
+        "email",
+        "telefono",
+        "id_azienda",
+        "tipo",
+        "cancellato",
+        "ultima_modifica"
+      ],
+      "sha256": "b873695b90eadc46b402f8fb5bef0af6ee1c279c7757e6f178ab24f8823327bc",
+      "malformed_rows": 0,
+      "blank_cells": {
+        "id_contatto": 0,
+        "nome": 0,
+        "cognome": 0,
+        "email": 1442,
+        "telefono": 17458,
+        "id_azienda": 13565,
+        "tipo": 0,
+        "cancellato": 35349,
+        "ultima_modifica": 0
+      },
+      "flags": {
+        "NO": 11644,
+        "": 35349,
+        "0": 11725,
+        "N": 11871,
+        "S": 936,
+        "Sì": 446,
+        "1": 461,
+        "s": 460,
+        "SI": 499
+      },
+      "multiline_rows": 0,
+      "mojibake_marker_rows": 1933,
+      "duplicate_primary_ids": 0
+    },
+    "listino": {
+      "rows": 1922,
+      "active": 1852,
+      "deleted": 70,
+      "columns": [
+        "codice_articolo",
+        "descrizione",
+        "unita",
+        "prezzo_listino",
+        "cancellato",
+        "ultima_modifica"
+      ],
+      "sha256": "9304f396790c2983bdbe97a4a7b7788ca14f47290c0a82add4db42de64670c1f",
+      "malformed_rows": 0,
+      "blank_cells": {
+        "codice_articolo": 0,
+        "descrizione": 0,
+        "unita": 0,
+        "prezzo_listino": 0,
+        "cancellato": 916,
+        "ultima_modifica": 0
+      },
+      "flags": {
+        "0": 309,
+        "": 916,
+        "SI": 11,
+        "N": 343,
+        "NO": 284,
+        "s": 19,
+        "Sì": 10,
+        "S": 20,
+        "1": 10
+      },
+      "multiline_rows": 0,
+      "mojibake_marker_rows": 0
+    },
+    "opportunita": {
+      "rows": 35020,
+      "active": 33577,
+      "deleted": 1443,
+      "columns": [
+        "id_opportunita",
+        "titolo",
+        "id_azienda",
+        "contatti",
+        "importo",
+        "valuta",
+        "pipeline",
+        "fase",
+        "data_chiusura",
+        "id_commerciale",
+        "cancellato",
+        "ultima_modifica"
+      ],
+      "sha256": "c9deaf05ff4ad76242282a10ca6e27034616000141605a8a36465320b86acc53",
+      "malformed_rows": 0,
+      "blank_cells": {
+        "id_opportunita": 0,
+        "titolo": 0,
+        "id_azienda": 3379,
+        "contatti": 6064,
+        "importo": 1320,
+        "valuta": 8445,
+        "pipeline": 1072,
+        "fase": 0,
+        "data_chiusura": 11801,
+        "id_commerciale": 687,
+        "cancellato": 16630,
+        "ultima_modifica": 0
+      },
+      "flags": {
+        "NO": 5584,
+        "N": 5550,
+        "S": 464,
+        "": 16630,
+        "0": 5813,
+        "s": 233,
+        "SI": 249,
+        "Sì": 239,
+        "1": 258
+      },
+      "multiline_rows": 0,
+      "mojibake_marker_rows": 0,
+      "duplicate_primary_ids": 0
+    },
+    "righe_offerta": {
+      "rows": 42736,
+      "active": 42736,
+      "deleted": 0,
+      "columns": [
+        "id_riga",
+        "id_opportunita",
+        "codice_articolo",
+        "descrizione",
+        "quantita",
+        "prezzo_unitario",
+        "sconto"
+      ],
+      "sha256": "149794c60dfef15669c43f8489ac12f2f4a5755ad9aec5226e473f4cc769b322",
+      "malformed_rows": 0,
+      "blank_cells": {
+        "id_riga": 0,
+        "id_opportunita": 0,
+        "codice_articolo": 0,
+        "descrizione": 5996,
+        "quantita": 0,
+        "prezzo_unitario": 2761,
+        "sconto": 9804
+      },
+      "flags": {
+        "N/A": 42736
+      },
+      "multiline_rows": 0,
+      "mojibake_marker_rows": 0,
+      "duplicate_primary_ids": 0
+    },
+    "storico_fasi": {
+      "rows": 110706,
+      "active": 110706,
+      "deleted": 0,
+      "columns": [
+        "id_opportunita",
+        "fase_precedente",
+        "fase_nuova",
+        "data_cambio",
+        "id_utente"
+      ],
+      "sha256": "b6660618b90fcb67f1a03d8c56b3877ec6a0ea6d32566f565e419e96016831d9",
+      "malformed_rows": 0,
+      "blank_cells": {
+        "id_opportunita": 0,
+        "fase_precedente": 35020,
+        "fase_nuova": 0,
+        "data_cambio": 0,
+        "id_utente": 0
+      },
+      "flags": {
+        "N/A": 110706
+      },
+      "multiline_rows": 0,
+      "mojibake_marker_rows": 0
+    },
+    "ticket": {
+      "rows": 22000,
+      "active": 21329,
+      "deleted": 671,
+      "columns": [
+        "id_ticket",
+        "oggetto",
+        "descrizione",
+        "stato",
+        "priorita",
+        "id_contatto",
+        "id_azienda",
+        "aperto_il",
+        "chiuso_il",
+        "id_utente",
+        "cancellato",
+        "ultima_modifica"
+      ],
+      "sha256": "83856764da149c50162e3a0f9482476ef73bad41364d45ab6c2f1f9981bb8716",
+      "malformed_rows": 0,
+      "blank_cells": {
+        "id_ticket": 0,
+        "oggetto": 0,
+        "descrizione": 0,
+        "stato": 0,
+        "priorita": 2147,
+        "id_contatto": 3591,
+        "id_azienda": 5399,
+        "aperto_il": 0,
+        "chiuso_il": 5520,
+        "id_utente": 0,
+        "cancellato": 10749,
+        "ultima_modifica": 0
+      },
+      "flags": {
+        "": 10749,
+        "0": 3585,
+        "NO": 3476,
+        "N": 3519,
+        "S": 238,
+        "s": 120,
+        "1": 102,
+        "Sì": 106,
+        "SI": 105
+      },
+      "multiline_rows": 14375,
+      "mojibake_marker_rows": 1149,
+      "duplicate_primary_ids": 0
+    },
+    "utenti": {
+      "rows": 85,
+      "active": 85,
+      "deleted": 0,
+      "columns": [
+        "id_utente",
+        "nome",
+        "cognome",
+        "email",
+        "ruolo",
+        "responsabile",
+        "attivo"
+      ],
+      "sha256": "f0fd206e3c3496c063719e587ba70928bccb28630a47e9e56d165dbf36168373",
+      "malformed_rows": 0,
+      "blank_cells": {
+        "id_utente": 0,
+        "nome": 0,
+        "cognome": 0,
+        "email": 0,
+        "ruolo": 0,
+        "responsabile": 1,
+        "attivo": 0
+      },
+      "flags": {
+        "N/A": 85
+      },
+      "multiline_rows": 0,
+      "mojibake_marker_rows": 0,
+      "duplicate_primary_ids": 0
+    }
+  },
+  "total_rows": 676673,
+  "date_parse": {
+    "attivita.data": {
+      "excel_serials": 0,
+      "unparsed": {},
+      "min": "2012-01-01 08:02:24",
+      "max": "2026-11-30 18:55:09"
+    },
+    "aziende.ultima_modifica": {
+      "excel_serials": 0,
+      "unparsed": {},
+      "min": "2011-01-01 02:28:00",
+      "max": "2025-06-10 10:50:00"
+    },
+    "contatti.ultima_modifica": {
+      "excel_serials": 0,
+      "unparsed": {},
+      "min": "2011-01-01 00:07:00",
+      "max": "2025-07-13 13:54:00"
+    },
+    "listino.ultima_modifica": {
+      "excel_serials": 0,
+      "unparsed": {},
+      "min": "2011-01-04 00:21:00",
+      "max": "2024-10-31 17:41:00"
+    },
+    "opportunita.data_chiusura": {
+      "excel_serials": 2330,
+      "unparsed": {},
+      "min": "2012-01-31 00:00:00",
+      "max": "2026-01-18 00:00:00"
+    },
+    "opportunita.ultima_modifica": {
+      "excel_serials": 0,
+      "unparsed": {},
+      "min": "2012-01-13 19:41:05",
+      "max": "2026-11-27 12:17:15"
+    },
+    "storico_fasi.data_cambio": {
+      "excel_serials": 0,
+      "unparsed": {},
+      "min": "2012-01-01 09:39:07",
+      "max": "2025-11-10 12:02:15"
+    },
+    "ticket.aperto_il": {
+      "excel_serials": 0,
+      "unparsed": {},
+      "min": "2013-01-01 10:22:10",
+      "max": "2026-09-17 11:56:08"
+    },
+    "ticket.chiuso_il": {
+      "excel_serials": 0,
+      "unparsed": {},
+      "min": "2013-01-04 09:00:39",
+      "max": "2026-11-02 09:31:38"
+    },
+    "ticket.ultima_modifica": {
+      "excel_serials": 0,
+      "unparsed": {},
+      "min": "2013-01-03 15:37:04",
+      "max": "2026-11-28 01:15:58"
+    }
+  },
+  "companies": {
+    "live_rows": 19698,
+    "merged_companies": 17734,
+    "duplicate_groups": 1722,
+    "largest_group": 4,
+    "domain_duplicate_groups": 1154,
+    "vat_rows": 8263,
+    "vat_duplicate_groups": 818,
+    "vat_groups_with_multiple_domains": 540,
+    "conflicting_vat_groups": 0,
+    "latest_timestamp_ties": 0,
+    "tie_examples": [],
+    "cross_domain_example": [
+      {
+        "id_azienda": "254208",
+        "ragione_sociale": "Della Valle Automazione S.r.l.",
+        "sito_web": "DELLAVALLEAUTOMAZIONEGROUP.IT",
+        "note": "p.iva IT95675678528",
+        "citta": "Cantù",
+        "provincia": "CO",
+        "cancellato": "",
+        "ultima_modifica": "14/09/2020 15:11:00"
+      },
+      {
+        "id_azienda": "180310",
+        "ragione_sociale": "Della Valle Automazione S.r.l.",
+        "sito_web": "dellavalleautomazione.eu",
+        "note": "P.IVA 95675678528",
+        "citta": "Treviso",
+        "provincia": "TV",
+        "cancellato": "",
+        "ultima_modifica": "04/11/2019 04:36:00"
+      }
+    ]
+  },
+  "contacts": {
+    "live_rows": 70589,
+    "first_email_policy_merged_count": 64212,
+    "duplicate_email_groups": 5342,
+    "rows_in_duplicate_groups": 11719,
+    "swapped_email_phone": 125,
+    "multi_email_rows": 111,
+    "multi_email_examples": [
+      {
+        "id": "1629112",
+        "email": "gallo.enrico@fratellinegri89.it e enrico.gallo@hotmail.it",
+        "company": "711883",
+        "choices": [
+          "gallo.enrico@fratellinegri89.it",
+          "enrico.gallo@hotmail.it"
+        ]
+      },
+      {
+        "id": "9773585",
+        "email": "PEREGO.MARTA@CARPENTERIAROTA.EU e marta.perego@hotmail.it",
+        "company": "174165",
+        "choices": [
+          "perego.marta@carpenteriarota.eu",
+          "marta.perego@hotmail.it"
+        ]
+      },
+      {
+        "id": "6098674",
+        "email": "robertabellini@fratelligrasso67.it / roberta.bellini545@libero.it",
+        "company": "577096",
+        "choices": [
+          "robertabellini@fratelligrasso67.it",
+          "roberta.bellini545@libero.it"
+        ]
+      },
+      {
+        "id": "4626641",
+        "email": "benedettabellini@delucaricambibologna.eu ; benedetta.bellini@yahoo.it",
+        "company": "942228",
+        "choices": [
+          "benedettabellini@delucaricambibologna.eu",
+          "benedetta.bellini@yahoo.it"
+        ]
+      },
+      {
+        "id": "2603083",
+        "email": "costa.alberto@brambillagroup.it / alberto.costa@hotmail.it",
+        "company": "652652",
+        "choices": [
+          "costa.alberto@brambillagroup.it",
+          "alberto.costa@hotmail.it"
+        ]
+      }
+    ],
+    "nonempty_invalid_email": 3296,
+    "invalid_examples": [
+      [
+        "n.d.",
+        500
+      ],
+      [
+        "da chiedere",
+        496
+      ],
+      [
+        "-",
+        471
+      ],
+      [
+        "nessuna",
+        464
+      ],
+      [
+        "NO EMAIL",
+        450
+      ],
+      [
+        "alberto.conti@",
+        3
+      ],
+      [
+        "matteo.riva@",
+        3
+      ],
+      [
+        "noemi.cattaneo@gmail",
+        3
+      ],
+      [
+        "andrea.orlandi@gmail",
+        2
+      ],
+      [
+        "benedetta.spinelli@gmail",
+        2
+      ]
+    ],
+    "repaired_or_multiple_email": 1172,
+    "invalid_latest_company_with_older_valid": 269,
+    "r12_added_after_merge": 2955,
+    "free_email_domains_matching_company": 0,
+    "company_domain_choice_not_first": 0
+  },
+  "users": {
+    "total": 85,
+    "active": 65,
+    "rehired": {
+      "U22": "U84",
+      "U29": "U81",
+      "U47": "U83",
+      "U65": "U85",
+      "U72": "U80",
+      "U78": "U82"
+    },
+    "inactive_without_rehire": [
+      "U05",
+      "U12",
+      "U15",
+      "U16",
+      "U28",
+      "U30",
+      "U35",
+      "U37",
+      "U43",
+      "U48",
+      "U51",
+      "U62",
+      "U71",
+      "U79"
+    ],
+    "opportunita": {
+      "rehired_owner_rows": 2586,
+      "inactive_without_rehire_rows": 5632,
+      "unknown_or_name_owner_rows": 156,
+      "unknown_examples": [
+        [
+          "D'AMICO NICCOLÒ",
+          2
+        ],
+        [
+          "niccolò moretti",
+          1
+        ],
+        [
+          "paolo morelli",
+          2
+        ],
+        [
+          "T. Lombardo",
+          2
+        ],
+        [
+          "Stefano Marchetti",
+          1
+        ],
+        [
+          "MORETTI NICCOLÒ",
+          1
+        ],
+        [
+          "Pozzi Andrea",
+          1
+        ],
+        [
+          "SANNA CINZIA",
+          2
+        ],
+        [
+          "alessia brambilla",
+          1
+        ],
+        [
+          "MARCHETTI STEFANO",
+          1
+        ],
+        [
+          "DALÒ NOEMI",
+          2
+        ],
+        [
+          "Lombardo Tommaso",
+          1
+        ]
+      ]
+    },
+    "ticket": {
+      "rehired_owner_rows": 1535,
+      "inactive_without_rehire_rows": 3425,
+      "unknown_or_name_owner_rows": 0,
+      "unknown_examples": []
+    }
+  },
+  "references": {
+    "contatti.id_azienda": {
+      "blank": 13022,
+      "valid": 53932,
+      "missing": 1754,
+      "deleted": 1881
+    },
+    "opportunita.id_azienda": {
+      "valid": 29296,
+      "blank": 3237,
+      "deleted": 1044
+    },
+    "ticket.id_contatto": {
+      "valid": 17142,
+      "blank": 3484,
+      "deleted": 681,
+      "missing": 22
+    },
+    "ticket.id_azienda": {
+      "valid": 15505,
+      "blank": 5239,
+      "deleted": 585
+    },
+    "attivita.id_contatto": {
+      "valid": 325573,
+      "blank": 17774,
+      "deleted": 12703,
+      "missing": 3553
+    },
+    "attivita.id_opportunita": {
+      "blank": 179422,
+      "valid": 172890,
+      "deleted": 7291
+    },
+    "righe_offerta.id_opportunita": {
+      "deleted": 1722,
+      "valid": 41014
+    }
+  },
+  "products_lines": {
+    "active_product_rows": 1852,
+    "products_after_sku_merge": 1735,
+    "duplicate_sku_groups": 117,
+    "line_stats": {
+      "skipped_missing_or_deleted_deal": 1722,
+      "fractional_quantity": 2527,
+      "missing_description": 5736,
+      "importable_lines": 41014,
+      "fractional_discount": 6725,
+      "missing_price": 2640,
+      "missing_product_reference": 858,
+      "deleted_product_reference": 1222
+    },
+    "line_errors_count": 0,
+    "line_errors": []
+  },
+  "deals": {
+    "active": 33577,
+    "monthly_amount_rows": 810,
+    "monthly_outside_renewals": 0,
+    "credit_note_rows": 980,
+    "credit_nonnegative": [],
+    "credit_stages": {
+      "06": 980
+    },
+    "missing_closedate_closed_deals": 2656,
+    "closedate_recovered": 2656,
+    "unrecoverable_closedate_ids": [],
+    "current_stage_differs_from_latest_history": 3259,
+    "won_without_close_date": 0,
+    "amount_errors": [],
+    "amount_error_count": 0,
+    "quote_deals": 11659,
+    "quote_amount_comparison": {
+      "exact": 11659
+    },
+    "quote_mismatch_examples": [],
+    "quote_deals_currency": {
+      "EUR": 11659
+    },
+    "unknown_stages": {}
+  },
+  "activities": {
+    "stats": {
+      "no_valid_contact_or_deal": 17656,
+      "inactive_historical_author": 84416,
+      "year_2025": 24064
+    },
+    "normalized_types": {
+      "appunto": 35843,
+      "meeting": 9121,
+      "nota": 107567,
+      "telefonata": 26940,
+      "email": 36112,
+      "visita": 8960,
+      "riunione": 9016,
+      "chiamata": 53872,
+      "mail": 18018,
+      "tel.": 26949,
+      "e-mail": 18102,
+      "incontro": 9103
+    }
+  },
+  "derived_scenarios_NOT_official_expected": {
+    "assumptions": "First extracted email; active products only; ROUND_HALF_UP per line; latest history entry matching terminal stage fills missing close date; negative credits retained; no owner/association guessing.",
+    "revenue_total_sum_of_company_rounded": "32436093.91",
+    "company_classes": {
+      "blank": 17592,
+      "C": 65,
+      "A": 52,
+      "B": 25
+    },
+    "companies_with_2025_activity": 12987,
+    "dormant_stage_only": 954,
+    "dormant_excluding_credit_only_wins": 803,
+    "dormant_positive_amount_wins": 783,
+    "credit_rule_changes_company_ids": [
+      "103798",
+      "110941",
+      "111988",
+      "153603",
+      "164947",
+      "166849",
+      "180028",
+      "183137",
+      "186171",
+      "194502",
+      "19750",
+      "199530",
+      "204290",
+      "205228",
+      "20727",
+      "2213",
+      "227329",
+      "232947",
+      "240274",
+      "246265"
+    ]
+  },
+  "tickets": {
+    "stats": {
+      "sender_header": 5471,
+      "contact_but_no_company": 4171,
+      "close_before_open": 161,
+      "sender_header_no_valid_contact": 718,
+      "sender_matches_existing_contact": 456
+    },
+    "statuses": {
+      "Chiuso": 3184,
+      "chiuso": 3155,
+      "IN LAVORAZIONE": 550,
+      "RISOLTO": 3260,
+      "aperto": 337,
+      "Risolto": 3193,
+      "NUOVO": 343,
+      "CHIUSO": 3195,
+      "Lavorazione": 520,
+      "IN ATTESA": 484,
+      "Attesa cliente": 468,
+      "In lavorazione": 540,
+      "in lavorazione": 546,
+      "Nuovo": 349,
+      "In attesa cliente": 500,
+      "APERTO": 349,
+      "Aperto": 356
+    },
+    "priorities": {
+      "MEDIA": 2197,
+      "1 - Bassa": 1180,
+      "ALTA": 1032,
+      "bassa": 1230,
+      "alta": 1057,
+      "Alta": 1014,
+      "Bassa": 1187,
+      "Media": 2176,
+      "2 - Media": 2278,
+      "4 - Urgente": 417,
+      "3 - Alta": 1012,
+      "": 2076,
+      "Normale": 2132,
+      "BASSA": 1193,
+      "Urgente": 386,
+      "URGENTE": 385,
+      "URGENTE!!": 377
+    }
+  },
+  "encoding": {
+    "marker_cells": 4719,
+    "whole_cell_strict_repair_candidates": 4719
+  },
+  "source_unchanged": true
+}

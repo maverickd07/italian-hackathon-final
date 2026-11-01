@@ -1,0 +1,30 @@
+{
+  "assertions": 12054,
+  "page_transitions": 500,
+  "drawer_cycles": 5000,
+  "rapid_keys": 600,
+  "paid_model_calls": 0,
+  "result": "passed",
+  "python_regression_tests_passed": 175,
+  "browser": {
+    "engine": "Chrome",
+    "navigation_drawer_cycles": 20,
+    "back_forward_cycles": 5,
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "shift_enter_preserved": true,
+    "repeated_enter_backend_requests": 1,
+    "navigation_backend_requests": 0,
+    "model": "fake only"
+  },
+  "fixed_edges": [
+    "Missing or throwing matchMedia safely falls back to a static pet.",
+    "Corrupt stored history/attachments are ignored instead of crashing chat."
+  ],
+  "limitations": [
+    "Stress loops use a simulated DOM; 20 navigation/drawer cycles plus keyboard/history/mobile checks ran in Chrome.",
+    "No real model/provider calls; no Safari or Firefox coverage."
+  ]
+}

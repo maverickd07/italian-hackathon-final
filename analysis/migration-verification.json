@@ -1,0 +1,46 @@
+{
+  "sqlite": {
+    "seconds": 24.75,
+    "counts": {
+      "companies": 17734,
+      "contacts": 64212,
+      "products": 1735,
+      "deals": 33577,
+      "line_items": 41014,
+      "tickets": 21329,
+      "notes": 143410,
+      "meetings": 36200,
+      "calls": 107761,
+      "emails": 72232
+    },
+    "total": 539204,
+    "associations": 1393960
+  },
+  "postgres": {
+    "seconds": 39.65,
+    "counts": {
+      "companies": 17734,
+      "contacts": 64212,
+      "products": 1735,
+      "deals": 33577,
+      "line_items": 41014,
+      "tickets": 21329,
+      "notes": 143410,
+      "meetings": 36200,
+      "calls": 107761,
+      "emails": 72232
+    },
+    "total": 539204,
+    "associations": 1393960
+  },
+  "api_after_restart": {
+    "company_pages_no_duplicates": 17734,
+    "company_search_total": 17734,
+    "read_samples": 200,
+    "concurrency": 20,
+    "p95_seconds": 0.0615,
+    "database_restart_verified": true,
+    "note": "Local TestClient and local Postgres; not Railway latency"
+  },
+  "scope": "Local verification only; no Railway migration or model calls."
+}

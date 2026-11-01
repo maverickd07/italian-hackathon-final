@@ -1,0 +1,35 @@
+{
+  "checked_at": "2026-10-09T12:50:52.480629+00:00",
+  "form_check_runs": 1,
+  "result": "6/6 PASS",
+  "migration_seconds_platform": 81.84,
+  "example_tests": {
+    "passed": 10,
+    "total": 10
+  },
+  "checks": {
+    "health": "PASS",
+    "bearer_auth": "PASS",
+    "reset": "PASS",
+    "migrate": "PASS",
+    "examples": "PASS",
+    "assistant_under_60s": "PASS"
+  },
+  "failed_checks": [],
+  "deployment_id": "6edbcc40-33ed-4389-b612-447d6cefb653",
+  "deployment_status": "SUCCESS",
+  "model_enabled": true,
+  "usage": {
+    "usage": 0.00221195,
+    "limit_remaining": 9.99778805,
+    "limit": 10
+  },
+  "counts_after_form_check": {
+    "companies": 17386,
+    "contacts": 64212,
+    "deals": 33577,
+    "tickets": 21329,
+    "tasks": 0
+  },
+  "health_status": 200
+}

@@ -1,0 +1,343 @@
+{
+  "started_at": "2026-10-09T12:14:30.678074+00:00",
+  "base_url": "https://api-production-bb05d.up.railway.app",
+  "deployment_verified_before": "feec912b-c7b0-40e5-8648-3eaa217bc17e",
+  "model_calls": 0,
+  "business_writes": 0,
+  "phases": [
+    {
+      "name": "warmup",
+      "concurrency": 5,
+      "planned": 100,
+      "completed": 100,
+      "elapsed_seconds": 1.98,
+      "groups": {
+        "record": {
+          "requests": 100,
+          "statuses": {
+            "200": 100
+          },
+          "content_valid": true,
+          "p50_ms": 68.8,
+          "p95_ms": 279.5,
+          "max_ms": 357.1
+        }
+      }
+    },
+    {
+      "name": "single_record_20",
+      "concurrency": 20,
+      "planned": 1000,
+      "completed": 1000,
+      "elapsed_seconds": 6.49,
+      "groups": {
+        "record": {
+          "requests": 1000,
+          "statuses": {
+            "200": 1000
+          },
+          "content_valid": true,
+          "p50_ms": 103.3,
+          "p95_ms": 302.4,
+          "max_ms": 381.8
+        }
+      }
+    },
+    {
+      "name": "mixed_reads_20",
+      "concurrency": 20,
+      "planned": 600,
+      "completed": 600,
+      "elapsed_seconds": 3.53,
+      "groups": {
+        "pagination": {
+          "requests": 186,
+          "statuses": {
+            "200": 186
+          },
+          "content_valid": true,
+          "p50_ms": 97.4,
+          "p95_ms": 219.6,
+          "max_ms": 354.2
+        },
+        "record": {
+          "requests": 228,
+          "statuses": {
+            "200": 228
+          },
+          "content_valid": true,
+          "p50_ms": 103.0,
+          "p95_ms": 237.4,
+          "max_ms": 303.9
+        },
+        "search": {
+          "requests": 186,
+          "statuses": {
+            "200": 186
+          },
+          "content_valid": true,
+          "p50_ms": 101.9,
+          "p95_ms": 241.7,
+          "max_ms": 362.6
+        }
+      }
+    }
+  ],
+  "checks": {
+    "bearer_rejections": true,
+    "company_pagination": {
+      "pages": 178,
+      "unique_records": 17734,
+      "matches_search_total": true
+    },
+    "https_login": true,
+    "cookie_flags": true,
+    "session_cannot_auth_api": true,
+    "totals_unchanged": true,
+    "sample_records_unchanged": true
+  },
+  "health_before": {
+    "status": "ok",
+    "version": "2026-09",
+    "ui": {
+      "today": "/",
+      "assistant": "/assistant",
+      "companies": "/companies",
+      "contacts": "/contacts",
+      "deals": "/deals",
+      "tickets": "/tickets",
+      "dormant": "/dormant-customers"
+    }
+  },
+  "totals_before": {
+    "companies": 17734,
+    "contacts": 64212,
+    "deals": 33577,
+    "products": 1735,
+    "line_items": 41014,
+    "tickets": 21329,
+    "notes": 143410,
+    "tasks": 0,
+    "meetings": 36200,
+    "calls": 107761,
+    "emails": 72232
+  },
+  "ui_reads": [
+    {
+      "path": "/",
+      "status": 200,
+      "ms": 90.3,
+      "html": true
+    },
+    {
+      "path": "/companies/1",
+      "status": 200,
+      "ms": 184.9,
+      "html": true
+    },
+    {
+      "path": "/tickets",
+      "status": 200,
+      "ms": 110.0,
+      "html": true
+    },
+    {
+      "path": "/companies",
+      "status": 200,
+      "ms": 220.1,
+      "html": true
+    },
+    {
+      "path": "/companies",
+      "status": 200,
+      "ms": 192.6,
+      "html": true
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "ms": 207.1,
+      "html": true
+    },
+    {
+      "path": "/companies/1",
+      "status": 200,
+      "ms": 175.2,
+      "html": true
+    },
+    {
+      "path": "/deals",
+      "status": 200,
+      "ms": 435.3,
+      "html": true
+    },
+    {
+      "path": "/tickets",
+      "status": 200,
+      "ms": 129.0,
+      "html": true
+    },
+    {
+      "path": "/deals",
+      "status": 200,
+      "ms": 172.7,
+      "html": true
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "ms": 131.0,
+      "html": true
+    },
+    {
+      "path": "/companies/1",
+      "status": 200,
+      "ms": 100.0,
+      "html": true
+    },
+    {
+      "path": "/companies",
+      "status": 200,
+      "ms": 191.5,
+      "html": true
+    },
+    {
+      "path": "/deals",
+      "status": 200,
+      "ms": 189.7,
+      "html": true
+    },
+    {
+      "path": "/tickets",
+      "status": 200,
+      "ms": 143.2,
+      "html": true
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "ms": 109.5,
+      "html": true
+    },
+    {
+      "path": "/companies/1",
+      "status": 200,
+      "ms": 151.3,
+      "html": true
+    },
+    {
+      "path": "/dormant-customers",
+      "status": 200,
+      "ms": 1061.2,
+      "html": true
+    },
+    {
+      "path": "/dormant-customers",
+      "status": 200,
+      "ms": 683.7,
+      "html": true
+    },
+    {
+      "path": "/companies",
+      "status": 200,
+      "ms": 220.5,
+      "html": true
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "ms": 72.4,
+      "html": true
+    },
+    {
+      "path": "/tickets",
+      "status": 200,
+      "ms": 97.1,
+      "html": true
+    },
+    {
+      "path": "/dormant-customers",
+      "status": 200,
+      "ms": 511.0,
+      "html": true
+    },
+    {
+      "path": "/deals",
+      "status": 200,
+      "ms": 216.1,
+      "html": true
+    },
+    {
+      "path": "/companies/1",
+      "status": 200,
+      "ms": 64.7,
+      "html": true
+    },
+    {
+      "path": "/companies",
+      "status": 200,
+      "ms": 142.0,
+      "html": true
+    },
+    {
+      "path": "/deals",
+      "status": 200,
+      "ms": 199.0,
+      "html": true
+    },
+    {
+      "path": "/tickets",
+      "status": 200,
+      "ms": 257.5,
+      "html": true
+    },
+    {
+      "path": "/dormant-customers",
+      "status": 200,
+      "ms": 522.0,
+      "html": true
+    },
+    {
+      "path": "/dormant-customers",
+      "status": 200,
+      "ms": 437.6,
+      "html": true
+    }
+  ],
+  "totals_after": {
+    "companies": 17734,
+    "contacts": 64212,
+    "deals": 33577,
+    "products": 1735,
+    "line_items": 41014,
+    "tickets": 21329,
+    "notes": 143410,
+    "tasks": 0,
+    "meetings": 36200,
+    "calls": 107761,
+    "emails": 72232
+  },
+  "sample_records_checked": 50,
+  "health_after": {
+    "status": "ok",
+    "version": "2026-09",
+    "ui": {
+      "today": "/",
+      "assistant": "/assistant",
+      "companies": "/companies",
+      "contacts": "/contacts",
+      "deals": "/deals",
+      "tickets": "/tickets",
+      "dormant": "/dormant-customers"
+    }
+  },
+  "completed_at": "2026-10-09T12:15:16.912064+00:00",
+  "passed": true,
+  "deployment_verified_after": "feec912b-c7b0-40e5-8648-3eaa217bc17e",
+  "limits": [
+    "Read-only workload; no production business mutation, restart, migration or real-model verification.",
+    "Totals and 50 sampled records checked; this is not a full database fingerprint comparison.",
+    "HTTPS page responses checked, not browser JavaScript execution.",
+    "Initial preflight included unsupported quotes object and stopped with HTTPStatusError before load; load scope corrected to implemented object registry. General API completeness is not established."
+  ]
+}

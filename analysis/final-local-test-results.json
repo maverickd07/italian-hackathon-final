@@ -1,0 +1,23 @@
+{
+  "model_called": false,
+  "deployed_this_pass": false,
+  "code_changed_during_tests": [],
+  "javascript_files_syntax_checked": 4,
+  "ruff": "passed",
+  "suites": {
+    "sqlite": {
+      "tests": "175",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "time": "11.849"
+    },
+    "postgres": {
+      "tests": "175",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "time": "41.441"
+    }
+  }
+}

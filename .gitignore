@@ -1,0 +1,23 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.pyc
+*.db
+*.db-wal
+*.db-shm
+.env
+.env.*
+.railway/
+
+# Local credential-audit locations are not part of the deliverable.
+analysis/claude-key-inventory.json
+analysis/claude-cleanup-audit.json
+
+# Private inputs and local artifacts
+.DS_Store
+sinergia-export/
+starter-v9/
+starter.zip
+*.pem
+*.key

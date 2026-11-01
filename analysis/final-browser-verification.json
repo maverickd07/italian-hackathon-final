@@ -1,0 +1,36 @@
+{
+  "deployment": "feec912b-c7b0-40e5-8648-3eaa217bc17e",
+  "results": [
+    {
+      "page": "company",
+      "path": "/companies/1",
+      "status": 200,
+      "heading": "Nuova Impianti Benedetti S.p.A.",
+      "screenshot": "/tmp/relay-final-company.png"
+    },
+    {
+      "page": "deals",
+      "path": "/deals",
+      "status": 200,
+      "heading": "Deals",
+      "screenshot": "/tmp/relay-final-deals.png"
+    },
+    {
+      "page": "dormant",
+      "path": "/dormant-customers",
+      "status": 200,
+      "heading": "Dormant customers",
+      "screenshot": "/tmp/relay-final-dormant.png"
+    },
+    {
+      "page": "tickets",
+      "path": "/tickets",
+      "status": 200,
+      "heading": "Support tickets",
+      "screenshot": "/tmp/relay-final-tickets.png"
+    }
+  ],
+  "page_errors": [],
+  "model_requests": 0,
+  "login": "passed"
+}

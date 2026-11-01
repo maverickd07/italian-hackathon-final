@@ -1,0 +1,397 @@
+{
+  "started_at": "2026-10-09T12:37:06.206845+00:00",
+  "baseline_usage": 1.24e-05,
+  "target_usd": 2,
+  "hard_max_usd": 2.5,
+  "form_check": "6/6 PASS, one official run; migration 81.84 seconds",
+  "scenarios": [
+    {
+      "name": "read_only",
+      "request": {
+        "context": {
+          "now": "2026-10-09T12:38:11.894553+00:00",
+          "user": "nicolo.deluca@brambillaforniture.it"
+        },
+        "messages": [
+          {
+            "role": "user",
+            "content": "Quanto abbiamo fatturato con Nuova Saldature Basile S.p.A. nel 2025? Qual è la classe cliente?"
+          }
+        ]
+      },
+      "usage_before": {
+        "usage": 1.24e-05,
+        "limit_remaining": 9.9999876,
+        "limit": 10
+      },
+      "status": "returned",
+      "at": "2026-10-09T12:38:11.894553+00:00",
+      "http_status": 200,
+      "seconds": 4.193,
+      "response": {
+        "reply": "Nel 2025 abbiamo fatturato **25.192,87 €** con Nuova Saldature Basile S.p.A. La classe cliente è **B**."
+      },
+      "usage_after": {
+        "usage": 1.24e-05,
+        "limit_remaining": 9.9999876,
+        "limit": 10
+      },
+      "verification": {
+        "company_unchanged": true,
+        "expected_revenue": "25192.87",
+        "expected_class": "B"
+      },
+      "usage_reconciled": {
+        "usage": 1.24e-05,
+        "limit_remaining": 9.9999876,
+        "limit": 10
+      },
+      "billing_delta_during_interval_usd": 0.0,
+      "verdict": "PASS"
+    },
+    {
+      "name": "duplicate_vat",
+      "request": {
+        "context": {
+          "now": "2026-10-09T12:38:52.134255+00:00",
+          "user": "nicolo.deluca@brambillaforniture.it"
+        },
+        "messages": [
+          {
+            "role": "user",
+            "content": "Crea una nuova azienda chiamata Prova Test S.r.l. con partita IVA 62147167126."
+          }
+        ]
+      },
+      "usage_before": {
+        "usage": 0.00031016,
+        "limit_remaining": 9.99968984,
+        "limit": 10
+      },
+      "status": "returned",
+      "at": "2026-10-09T12:38:52.134255+00:00",
+      "http_status": 200,
+      "seconds": 5.906,
+      "response": {
+        "reply": "Operazione completata e verificata.\n«Prova Test S.r.l.»: creato; nome: Prova Test S.r.l.; vat_number: 62147167126"
+      },
+      "usage_after": {
+        "usage": 0.00031016,
+        "limit_remaining": 9.99968984,
+        "limit": 10
+      },
+      "verification": {
+        "existing_company_unchanged": true,
+        "company_count_before": 17734,
+        "company_count_after": 17735,
+        "new_named_company_count": 1,
+        "vat_count_after": 1
+      },
+      "created_records": [
+        {
+          "id": "175595075180485946213386433698994571970",
+          "properties": {
+            "name": "Prova Test S.r.l.",
+            "vat_number": "62147167126",
+            "hs_object_id": "175595075180485946213386433698994571970",
+            "createdate": "2026-10-09T12:38:58.031Z",
+            "hs_lastmodifieddate": "2026-10-09T12:38:58.031Z"
+          },
+          "createdAt": "2026-10-09T12:38:58.031Z",
+          "updatedAt": "2026-10-09T12:38:58.031Z",
+          "archived": false
+        }
+      ],
+      "verdict": "FAIL",
+      "cleanup": {
+        "archived": true,
+        "record_id": "175595075180485946213386433698994571970",
+        "active_company_count": 17734
+      },
+      "billing_delta_during_interval_usd": 0.0
+    },
+    {
+      "name": "ambiguity",
+      "request": {
+        "context": {
+          "now": "2026-10-09T12:39:40.833557+00:00",
+          "user": "nicolo.deluca@brambillaforniture.it"
+        },
+        "messages": [
+          {
+            "role": "user",
+            "content": "Segna come persa la trattativa di Rossi."
+          }
+        ]
+      },
+      "usage_before": {
+        "usage": 0.00031016,
+        "limit_remaining": 9.99968984,
+        "limit": 10
+      },
+      "status": "returned",
+      "at": "2026-10-09T12:39:40.833557+00:00",
+      "http_status": 200,
+      "seconds": 10.34,
+      "response": {
+        "reply": "Ho trovato 369 trattative con “Rossi” nel nome. Quale intendi? Per esempio, “Fornitura componenti Officine Rossi” o “Rossi & Ferraro - ordine quadro”."
+      },
+      "usage_after": {
+        "usage": 0.000632505,
+        "limit_remaining": 9.999367495,
+        "limit": 10
+      },
+      "verification": {
+        "matched_deals": 369,
+        "all_matching_deals_unchanged": true,
+        "counts_before": {
+          "deals": 33577,
+          "tickets": 21329,
+          "tasks": 0
+        },
+        "counts_after": {
+          "deals": 33577,
+          "tickets": 21329,
+          "tasks": 0
+        }
+      },
+      "billing_delta_during_interval_usd": 0.000322345,
+      "verdict": "PASS"
+    },
+    {
+      "name": "write_won",
+      "request": {
+        "context": {
+          "now": "2026-10-09T12:40:30.346358+00:00",
+          "user": "michele.tagliabue@brambillaforniture.it"
+        },
+        "messages": [
+          {
+            "role": "user",
+            "content": "Segna come vinta la trattativa \"Fornitura lamiere Bellini & Lo Russo\" (ID 83688), attualmente in Contratto: è arrivato l’ordine firmato. Non modificare gli altri campi."
+          }
+        ]
+      },
+      "usage_before": {
+        "usage": 0.000632505,
+        "limit_remaining": 9.999367495,
+        "limit": 10
+      },
+      "status": "returned",
+      "at": "2026-10-09T12:40:30.346358+00:00",
+      "http_status": 200,
+      "seconds": 5.728,
+      "response": {
+        "reply": "Operazione completata e verificata.\n«Fornitura lamiere Bellini & Lo Russo»: aggiornato; fase: Contratto → Vinta"
+      },
+      "usage_after": {
+        "usage": 0.00125922,
+        "limit_remaining": 9.99874078,
+        "limit": 10
+      },
+      "verification": {
+        "changed_fields": {
+          "hs_lastmodifieddate": {
+            "before": "2018-04-23T14:19:37.000Z",
+            "after": "2026-10-09T12:40:36.018Z"
+          },
+          "dealstage": {
+            "before": "contractsent",
+            "after": "closedwon"
+          }
+        },
+        "other_company_deal_unchanged": true,
+        "kickoff_count_before": 0,
+        "kickoff_count_after": 1,
+        "kickoff_records": [
+          {
+            "id": "133756761042959603613638034162606394962",
+            "properties": {
+              "subject": "Avvio fornitura - Fornitura lamiere Bellini & Lo Russo",
+              "hs_pipeline": "assistenza",
+              "assegnatario": "michele.tagliabue@brambillaforniture.it",
+              "hs_pipeline_stage": "assistenza_open",
+              "hs_object_id": "133756761042959603613638034162606394962",
+              "createdate": "2026-10-09T12:40:30.346Z",
+              "hs_lastmodifieddate": "2026-10-09T12:40:30.346Z"
+            },
+            "createdAt": "2026-10-09T12:40:30.346Z",
+            "updatedAt": "2026-10-09T12:40:30.346Z",
+            "archived": false
+          }
+        ],
+        "counts_before": {
+          "companies": 17734,
+          "deals": 33577,
+          "tickets": 21329,
+          "tasks": 0
+        },
+        "counts_after": {
+          "companies": 17734,
+          "deals": 33577,
+          "tickets": 21330,
+          "tasks": 0
+        },
+        "deal_after": {
+          "id": "83688",
+          "properties": {
+            "amount": "17872.29",
+            "dealname": "Fornitura lamiere Bellini & Lo Russo",
+            "pipeline": "default",
+            "dealstage": "closedwon",
+            "id_legacy": "98305119",
+            "commerciale": "michele.tagliabue@brambillaforniture.it",
+            "deal_currency_code": "EUR",
+            "hs_object_id": "83688",
+            "createdate": "2026-10-09T10:56:34.753Z",
+            "hs_lastmodifieddate": "2026-10-09T12:40:36.018Z"
+          },
+          "createdAt": "2026-10-09T10:56:34.753Z",
+          "updatedAt": "2026-10-09T12:40:36.018Z",
+          "archived": false
+        }
+      },
+      "billing_delta_during_interval_usd": 0.0006267149999999999,
+      "verdict": "PASS"
+    },
+    {
+      "name": "duplicate_vat_retest",
+      "request": {
+        "context": {
+          "now": "2026-10-09T12:47:35.771191+00:00",
+          "user": "nicolo.deluca@brambillaforniture.it"
+        },
+        "messages": [
+          {
+            "role": "user",
+            "content": "Crea una nuova azienda chiamata Prova Test S.r.l. con partita IVA 62147167126."
+          }
+        ]
+      },
+      "usage_before": {
+        "usage": 0.00164749,
+        "limit_remaining": 9.99835251,
+        "limit": 10
+      },
+      "status": "returned",
+      "at": "2026-10-09T12:47:35.771191+00:00",
+      "http_status": 200,
+      "seconds": 4.238,
+      "response": {
+        "reply": "Non posso creare **Prova Test S.r.l.**: la partita IVA **62147167126** risulta già associata all’azienda **Nuova Saldature Basile S.p.A.**"
+      },
+      "usage_after": {
+        "usage": 0.00164749,
+        "limit_remaining": 9.99835251,
+        "limit": 10
+      },
+      "cost_usd": 0.0,
+      "verification": {
+        "existing_company_unchanged": true,
+        "company_count_before": 17734,
+        "company_count_after": 17734,
+        "new_named_company_count": 0,
+        "vat_count_after": 1
+      },
+      "deployment": "6edbcc40-33ed-4389-b612-447d6cefb653",
+      "verdict": "PASS"
+    }
+  ],
+  "deployment": "d10cc0b4-64ae-4620-b0d6-c37d9a51d3ce",
+  "initial_usage": {
+    "usage": 1.24e-05,
+    "limit_remaining": 9.9999876,
+    "limit": 10
+  },
+  "read_baseline": {
+    "id": "12701",
+    "properties": {
+      "city": "Treviso",
+      "name": "Nuova Saldature Basile S.p.A.",
+      "state": "TV",
+      "domain": "nuovasaldaturebasile.com",
+      "id_legacy": "123718",
+      "partita_iva": "62147167126",
+      "classe_cliente": "B",
+      "fatturato_2025": "25192.87",
+      "hs_object_id": "12701",
+      "createdate": "2026-10-09T10:56:31.391Z",
+      "hs_lastmodifieddate": "2020-10-23T12:54:00.000Z"
+    },
+    "createdAt": "2026-10-09T10:56:31.391Z",
+    "updatedAt": "2020-10-23T12:54:00.000Z",
+    "archived": false
+  },
+  "write_baseline": {
+    "deal": {
+      "id": "83688",
+      "properties": {
+        "amount": "17872.29",
+        "dealname": "Fornitura lamiere Bellini & Lo Russo",
+        "pipeline": "default",
+        "dealstage": "contractsent",
+        "id_legacy": "98305119",
+        "commerciale": "michele.tagliabue@brambillaforniture.it",
+        "deal_currency_code": "EUR",
+        "hs_object_id": "83688",
+        "createdate": "2026-10-09T10:56:34.753Z",
+        "hs_lastmodifieddate": "2018-04-23T14:19:37.000Z"
+      },
+      "createdAt": "2026-10-09T10:56:34.753Z",
+      "updatedAt": "2018-04-23T14:19:37.000Z",
+      "archived": false
+    },
+    "other_deal": {
+      "id": "100714",
+      "properties": {
+        "amount": "156459.84",
+        "dealname": "Fornitura carpenteria Bellini & Lo Russo",
+        "pipeline": "default",
+        "closedate": "2012-09-14T00:00:00.000Z",
+        "dealstage": "closedwon",
+        "id_legacy": "32229935",
+        "commerciale": "cinzia.sanna@brambillaforniture.it",
+        "deal_currency_code": "EUR",
+        "hs_object_id": "100714",
+        "createdate": "2026-10-09T10:56:36.402Z",
+        "hs_lastmodifieddate": "2013-05-25T21:27:49.000Z"
+      },
+      "createdAt": "2026-10-09T10:56:36.402Z",
+      "updatedAt": "2013-05-25T21:27:49.000Z",
+      "archived": false
+    },
+    "tickets": {
+      "total": 0,
+      "results": []
+    },
+    "counts": {
+      "companies": 17734,
+      "deals": 33577,
+      "tickets": 21329,
+      "tasks": 0
+    },
+    "active_user_verified": "michele.tagliabue@brambillaforniture.it"
+  },
+  "final_usage_snapshot": {
+    "usage": 0.00221195,
+    "limit_remaining": 9.99778805,
+    "limit": 10
+  },
+  "test_spend_billed_so_far_usd": 0.00219955,
+  "billing_note": "Provider key usage is delayed. Before/after snapshots are actual reported totals but interval deltas are not reliable per-scenario attribution.",
+  "real_assistant_enabled": true,
+  "completed_at": "2026-10-09T12:41:17.183448+00:00",
+  "result": "Initial duplicate VAT failed, fixed and retest passed; official Form check 6/6",
+  "mutation_summary": {
+    "archived_erroneous_company": "175595075180485946213386433698994571970",
+    "won_deal": "83688",
+    "created_kickoff_ticket": "133756761042959603613638034162606394962"
+  },
+  "final_usage_checked_at": "2026-10-09T12:50:52.480629+00:00",
+  "before_form_check_usage": {
+    "usage": 0.0019784,
+    "limit_remaining": 9.9980216,
+    "limit": 10
+  },
+  "form_check_started_at": "2026-10-09T12:48:00Z"
+}

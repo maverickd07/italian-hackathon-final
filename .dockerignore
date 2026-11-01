@@ -1,0 +1,11 @@
+**
+!Dockerfile
+!pyproject.toml
+!uv.lock
+!railway.json
+!app/
+!app/**
+app/**/__pycache__/
+app/**/*.pyc
+app/**/*.db*
+app/**/.env*

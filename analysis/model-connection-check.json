@@ -1,0 +1,72 @@
+{
+  "at": "2026-10-09T12:20:59.200462+00:00",
+  "model": "openai/gpt-6-luna",
+  "key_present": true,
+  "live_enabled": "false",
+  "calls": [
+    {
+      "status": 200,
+      "seconds": 1.174,
+      "reply": "Connessione riuscita.",
+      "usage": {
+        "prompt_tokens": 17,
+        "completion_tokens": 9,
+        "total_tokens": 26,
+        "cost": 6.2e-06,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 6.2e-06,
+          "upstream_inference_prompt_cost": 1.7e-06,
+          "upstream_inference_completions_cost": 4.5e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    {
+      "status": 200,
+      "seconds": 0.92,
+      "reply": "Connessione riuscita.",
+      "usage": {
+        "prompt_tokens": 17,
+        "completion_tokens": 9,
+        "total_tokens": 26,
+        "cost": 6.2e-06,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 6.2e-06,
+          "upstream_inference_prompt_cost": 1.7e-06,
+          "upstream_inference_completions_cost": 4.5e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    }
+  ],
+  "key_metadata_status": 200,
+  "budget_before": {
+    "limit": 10,
+    "limit_remaining": 10,
+    "usage": 0,
+    "usage_daily": 0
+  },
+  "connected": true
+}

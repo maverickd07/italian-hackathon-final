@@ -1,0 +1,242 @@
+[
+  {
+    "timestamp": "2026-10-09T12:48:26.864737287Z",
+    "method": "GET",
+    "path": "/health",
+    "httpStatus": 200,
+    "totalDuration": 7,
+    "deploymentId": "6edbcc40-33ed-4389-b612-447d6cefb653"
+  },
+  {
+    "timestamp": "2026-10-09T12:48:26.937115924Z",
+    "method": "GET",
+    "path": "/crm/objects/2026-09/contacts",
+    "httpStatus": 401,
+    "totalDuration": 4,
+    "deploymentId": "6edbcc40-33ed-4389-b612-447d6cefb653"
+  },
+  {
+    "timestamp": "2026-10-09T12:48:27.070141858Z",
+    "method": "GET",
+    "path": "/crm/objects/2026-09/contacts",
+    "httpStatus": 200,
+    "totalDuration": 11,
+    "deploymentId": "6edbcc40-33ed-4389-b612-447d6cefb653"
+  },
+  {
+    "timestamp": "2026-10-09T12:48:27.272425197Z",
+    "method": "POST",
+    "path": "/__reset",
+    "httpStatus": 204,
+    "totalDuration": 133,
+    "deploymentId": "6edbcc40-33ed-4389-b612-447d6cefb653"
+  },
+  {
+    "timestamp": "2026-10-09T12:48:27.639163399Z",
+    "method": "GET",
+    "path": "/health",
+    "httpStatus": 200,
+    "totalDuration": 6,
+    "deploymentId": "6edbcc40-33ed-4389-b612-447d6cefb653"
+  },
+  {
+    "timestamp": "2026-10-09T12:48:27.797068933Z",
+    "method": "POST",
+    "path": "/__reset",
+    "httpStatus": 204,
+    "totalDuration": 87,
+    "deploymentId": "6edbcc40-33ed-4389-b612-447d6cefb653"
+  },
+  {
+    "timestamp": "2026-10-09T12:48:27.837795595Z",
+    "method": "POST",
+    "path": "/crm/objects/2026-09/contacts",
+    "httpStatus": 201,
+    "totalDuration": 17,
+    "deploymentId": "6edbcc40-33ed-4389-b612-447d6cefb653"
+  },
+  {
+    "timestamp": "2026-10-09T12:48:27.959824300Z",
+    "method": "POST",
+    "path": "/__reset",
+    "httpStatus": 204,
+    "totalDuration": 96,
+    "deploymentId": "6edbcc40-33ed-4389-b612-447d6cefb653"
+  },
+  {
+    "timestamp": "2026-10-09T12:48:28.000155050Z",
+    "method": "POST",
+    "path": "/crm/objects/2026-09/contacts",
+    "httpStatus": 201,
+    "totalDuration": 17,
+    "deploymentId": "6edbcc40-33ed-4389-b612-447d6cefb653"
+  },
+  {
+    "timestamp": "2026-10-09T12:48:28.031944005Z",
+    "method": "DELETE",
+    "path": "/crm/objects/2026-09/contacts/132197631264999188295303407134283377967",
+    "httpStatus": 204,
+    "totalDuration": 9,
+    "deploymentId": "6edbcc40-33ed-4389-b612-447d6cefb653"
+  },
+  {
+    "timestamp": "2026-10-09T12:48:28.134026450Z",
+    "method": "POST",
+    "path": "/__reset",
+    "httpStatus": 204,
+    "totalDuration": 78,
+    "deploymentId": "6edbcc40-33ed-4389-b612-447d6cefb653"
+  },
+  {
+    "timestamp": "2026-10-09T12:48:28.174391505Z",
+    "method": "POST",
+    "path": "/crm/objects/2026-09/contacts",
+    "httpStatus": 201,
+    "totalDuration": 17,
+    "deploymentId": "6edbcc40-33ed-4389-b612-447d6cefb653"
+  },
+  {
+    "timestamp": "2026-10-09T12:48:28.209499205Z",
+    "method": "GET",
+    "path": "/crm/objects/2026-09/contacts/322213029441465610810893483248814248554",
+    "httpStatus": 200,
+    "totalDuration": 12,
+    "deploymentId": "6edbcc40-33ed-4389-b612-447d6cefb653"
+  },
+  {
+    "timestamp": "2026-10-09T12:48:28.311446120Z",
+    "method": "POST",
+    "path": "/__reset",
+    "httpStatus": 204,
+    "totalDuration": 76,
+    "deploymentId": "6edbcc40-33ed-4389-b612-447d6cefb653"
+  },
+  {
+    "timestamp": "2026-10-09T12:48:28.379485744Z",
+    "method": "GET",
+    "path": "/crm/objects/2026-09/contacts",
+    "httpStatus": 401,
+    "totalDuration": 3,
+    "deploymentId": "6edbcc40-33ed-4389-b612-447d6cefb653"
+  },
+  {
+    "timestamp": "2026-10-09T12:48:28.500924121Z",
+    "method": "POST",
+    "path": "/__reset",
+    "httpStatus": 204,
+    "totalDuration": 90,
+    "deploymentId": "6edbcc40-33ed-4389-b612-447d6cefb653"
+  },
+  {
+    "timestamp": "2026-10-09T12:48:28.527282296Z",
+    "method": "GET",
+    "path": "/health",
+    "httpStatus": 200,
+    "totalDuration": 4,
+    "deploymentId": "6edbcc40-33ed-4389-b612-447d6cefb653"
+  },
+  {
+    "timestamp": "2026-10-09T12:48:28.630863621Z",
+    "method": "POST",
+    "path": "/__reset",
+    "httpStatus": 204,
+    "totalDuration": 80,
+    "deploymentId": "6edbcc40-33ed-4389-b612-447d6cefb653"
+  },
+  {
+    "timestamp": "2026-10-09T12:48:28.656802246Z",
+    "method": "POST",
+    "path": "/__reset",
+    "httpStatus": 401,
+    "totalDuration": 3,
+    "deploymentId": "6edbcc40-33ed-4389-b612-447d6cefb653"
+  },
+  {
+    "timestamp": "2026-10-09T12:48:28.781267017Z",
+    "method": "POST",
+    "path": "/__reset",
+    "httpStatus": 204,
+    "totalDuration": 100,
+    "deploymentId": "6edbcc40-33ed-4389-b612-447d6cefb653"
+  },
+  {
+    "timestamp": "2026-10-09T12:48:28.806054526Z",
+    "method": "POST",
+    "path": "/__migrate",
+    "httpStatus": 401,
+    "totalDuration": 1,
+    "deploymentId": "6edbcc40-33ed-4389-b612-447d6cefb653"
+  },
+  {
+    "timestamp": "2026-10-09T12:48:28.907781138Z",
+    "method": "POST",
+    "path": "/__reset",
+    "httpStatus": 204,
+    "totalDuration": 78,
+    "deploymentId": "6edbcc40-33ed-4389-b612-447d6cefb653"
+  },
+  {
+    "timestamp": "2026-10-09T12:48:28.935345542Z",
+    "method": "POST",
+    "path": "/__agente",
+    "httpStatus": 401,
+    "totalDuration": 4,
+    "deploymentId": "6edbcc40-33ed-4389-b612-447d6cefb653"
+  },
+  {
+    "timestamp": "2026-10-09T12:48:29.046889476Z",
+    "method": "POST",
+    "path": "/__reset",
+    "httpStatus": 204,
+    "totalDuration": 89,
+    "deploymentId": "6edbcc40-33ed-4389-b612-447d6cefb653"
+  },
+  {
+    "timestamp": "2026-10-09T12:48:29.083752873Z",
+    "method": "POST",
+    "path": "/crm/objects/2026-09/contacts",
+    "httpStatus": 201,
+    "totalDuration": 14,
+    "deploymentId": "6edbcc40-33ed-4389-b612-447d6cefb653"
+  },
+  {
+    "timestamp": "2026-10-09T12:48:29.183359124Z",
+    "method": "POST",
+    "path": "/__reset",
+    "httpStatus": 204,
+    "totalDuration": 76,
+    "deploymentId": "6edbcc40-33ed-4389-b612-447d6cefb653"
+  },
+  {
+    "timestamp": "2026-10-09T12:48:29.215342268Z",
+    "method": "GET",
+    "path": "/crm/objects/2026-09/contacts",
+    "httpStatus": 200,
+    "totalDuration": 9,
+    "deploymentId": "6edbcc40-33ed-4389-b612-447d6cefb653"
+  },
+  {
+    "timestamp": "2026-10-09T12:48:29.246970797Z",
+    "method": "GET",
+    "path": "/crm/pipelines/2026-09/deals/default",
+    "httpStatus": 200,
+    "totalDuration": 8,
+    "deploymentId": "6edbcc40-33ed-4389-b612-447d6cefb653"
+  },
+  {
+    "timestamp": "2026-10-09T12:48:29.273922203Z",
+    "method": "GET",
+    "path": "/crm/properties/2026-09/contacts/email",
+    "httpStatus": 200,
+    "totalDuration": 4,
+    "deploymentId": "6edbcc40-33ed-4389-b612-447d6cefb653"
+  },
+  {
+    "timestamp": "2026-10-09T12:48:29.376743302Z",
+    "method": "POST",
+    "path": "/__reset",
+    "httpStatus": 204,
+    "totalDuration": 79,
+    "deploymentId": "6edbcc40-33ed-4389-b612-447d6cefb653"
+  }
+]

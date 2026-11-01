@@ -1,0 +1,21 @@
+{
+  "response_keys": [
+    "role",
+    "content",
+    "refusal",
+    "reasoning",
+    "tool_calls"
+  ],
+  "tool_calls": [
+    {
+      "type": "function",
+      "index": 0,
+      "id": "call_x0S7vktvT8MqTYbzSd3jSGyh",
+      "function": {
+        "name": "attachment",
+        "arguments": "{\"index\":0,\"kind\":\"products\"}"
+      }
+    }
+  ],
+  "content": null
+}

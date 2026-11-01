@@ -1,0 +1,16 @@
+{
+  "source_sha256": "eb95fab540ca0f4f9738364225893aa51ffb0274206f0b3d8350f4a80bac754b",
+  "all": {
+    "rows": 20497,
+    "with_vat": 10799,
+    "previously_missed": 2212,
+    "checksum_valid": 10799
+  },
+  "active": {
+    "rows": 19698,
+    "with_vat": 10399,
+    "previously_missed": 2136,
+    "checksum_valid": 10399
+  },
+  "policy": "R7 eleven ASCII digits; checksum audited, not a rejection condition."
+}

@@ -1,0 +1,24 @@
+{
+  "previous_deployment": "4570b576-aa60-4f70-9fce-77e9dea97065",
+  "historical_performance_deployment": "b8109d36-be1b-4de6-a42c-81de06e87662",
+  "rollback_source_archive": "/tmp/relay-preintegration-source.tar.gz",
+  "rollback_source_sha256": "558ca5fb457069fe44d653dbb0584d3f1ce4a9cb1adab12fc5cd3e2414c02a07",
+  "rollback": "Before freeze, redeploy previous Railway deployment/image through service deployment history; source-only archive also retained locally. No database restore or reset is needed for this additive application change. Current business data must be retained.",
+  "model_calls": false,
+  "baseline_report": "analysis/final-predeploy-data.json",
+  "prior_175_test_production_sources_unchanged": true,
+  "focused_suites": {
+    "sqlite": {
+      "tests": "20",
+      "errors": "0",
+      "failures": "0",
+      "time": "0.739"
+    },
+    "postgres": {
+      "tests": "20",
+      "errors": "0",
+      "failures": "0",
+      "time": "2.449"
+    }
+  }
+}

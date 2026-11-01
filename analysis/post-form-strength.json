@@ -1,0 +1,355 @@
+{
+  "started_at": "2026-10-09T12:53:46.310709+00:00",
+  "base_url": "https://api-production-bb05d.up.railway.app",
+  "deployment_verified_before": "6edbcc40-33ed-4389-b612-447d6cefb653",
+  "model_calls": 0,
+  "business_writes": 0,
+  "phases": [
+    {
+      "name": "warmup",
+      "concurrency": 5,
+      "planned": 100,
+      "completed": 100,
+      "elapsed_seconds": 1.21,
+      "groups": {
+        "record": {
+          "requests": 100,
+          "statuses": {
+            "200": 100
+          },
+          "content_valid": true,
+          "p50_ms": 44.4,
+          "p95_ms": 120.0,
+          "max_ms": 235.7
+        }
+      }
+    },
+    {
+      "name": "single_record_20",
+      "concurrency": 20,
+      "planned": 3000,
+      "completed": 3000,
+      "elapsed_seconds": 9.67,
+      "groups": {
+        "record": {
+          "requests": 3000,
+          "statuses": {
+            "200": 3000
+          },
+          "content_valid": true,
+          "p50_ms": 51.1,
+          "p95_ms": 139.3,
+          "max_ms": 765.3
+        }
+      }
+    },
+    {
+      "name": "single_record_40",
+      "concurrency": 40,
+      "planned": 1000,
+      "completed": 1000,
+      "elapsed_seconds": 3.01,
+      "groups": {
+        "record": {
+          "requests": 1000,
+          "statuses": {
+            "200": 1000
+          },
+          "content_valid": true,
+          "p50_ms": 64.0,
+          "p95_ms": 383.4,
+          "max_ms": 543.8
+        }
+      }
+    },
+    {
+      "name": "mixed_reads_20",
+      "concurrency": 20,
+      "planned": 1500,
+      "completed": 1500,
+      "elapsed_seconds": 5.05,
+      "groups": {
+        "pagination": {
+          "requests": 468,
+          "statuses": {
+            "200": 468
+          },
+          "content_valid": true,
+          "p50_ms": 57.7,
+          "p95_ms": 134.6,
+          "max_ms": 163.9
+        },
+        "record": {
+          "requests": 564,
+          "statuses": {
+            "200": 564
+          },
+          "content_valid": true,
+          "p50_ms": 47.7,
+          "p95_ms": 124.4,
+          "max_ms": 543.5
+        },
+        "search": {
+          "requests": 468,
+          "statuses": {
+            "200": 468
+          },
+          "content_valid": true,
+          "p50_ms": 60.4,
+          "p95_ms": 136.8,
+          "max_ms": 414.0
+        }
+      }
+    }
+  ],
+  "checks": {
+    "bearer_rejections": true,
+    "company_pagination": {
+      "pages": 174,
+      "unique_records": 17386,
+      "matches_search_total": true
+    },
+    "https_login": true,
+    "cookie_flags": true,
+    "session_cannot_auth_api": true,
+    "totals_unchanged": true,
+    "sample_records_unchanged": true
+  },
+  "health_before": {
+    "status": "ok",
+    "version": "2026-09",
+    "ui": {
+      "today": "/",
+      "assistant": "/assistant",
+      "companies": "/companies",
+      "contacts": "/contacts",
+      "deals": "/deals",
+      "tickets": "/tickets",
+      "dormant": "/dormant-customers"
+    }
+  },
+  "totals_before": {
+    "companies": 17386,
+    "contacts": 64212,
+    "deals": 33577,
+    "products": 1735,
+    "line_items": 41014,
+    "tickets": 21329,
+    "notes": 143410,
+    "tasks": 0,
+    "meetings": 36200,
+    "calls": 107761,
+    "emails": 72232
+  },
+  "ui_reads": [
+    {
+      "path": "/companies/1",
+      "status": 200,
+      "ms": 217.5,
+      "html": true
+    },
+    {
+      "path": "/companies",
+      "status": 200,
+      "ms": 236.5,
+      "html": true
+    },
+    {
+      "path": "/deals",
+      "status": 200,
+      "ms": 315.0,
+      "html": true
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "ms": 332.8,
+      "html": true
+    },
+    {
+      "path": "/tickets",
+      "status": 200,
+      "ms": 115.9,
+      "html": true
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "ms": 138.8,
+      "html": true
+    },
+    {
+      "path": "/companies/1",
+      "status": 200,
+      "ms": 167.4,
+      "html": true
+    },
+    {
+      "path": "/companies",
+      "status": 200,
+      "ms": 186.0,
+      "html": true
+    },
+    {
+      "path": "/tickets",
+      "status": 200,
+      "ms": 74.4,
+      "html": true
+    },
+    {
+      "path": "/deals",
+      "status": 200,
+      "ms": 266.0,
+      "html": true
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "ms": 185.9,
+      "html": true
+    },
+    {
+      "path": "/companies/1",
+      "status": 200,
+      "ms": 105.0,
+      "html": true
+    },
+    {
+      "path": "/companies",
+      "status": 200,
+      "ms": 147.1,
+      "html": true
+    },
+    {
+      "path": "/tickets",
+      "status": 200,
+      "ms": 72.9,
+      "html": true
+    },
+    {
+      "path": "/deals",
+      "status": 200,
+      "ms": 144.2,
+      "html": true
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "ms": 110.8,
+      "html": true
+    },
+    {
+      "path": "/dormant-customers",
+      "status": 200,
+      "ms": 641.6,
+      "html": true
+    },
+    {
+      "path": "/dormant-customers",
+      "status": 200,
+      "ms": 1018.4,
+      "html": true
+    },
+    {
+      "path": "/companies",
+      "status": 200,
+      "ms": 188.0,
+      "html": true
+    },
+    {
+      "path": "/companies/1",
+      "status": 200,
+      "ms": 115.6,
+      "html": true
+    },
+    {
+      "path": "/tickets",
+      "status": 200,
+      "ms": 128.8,
+      "html": true
+    },
+    {
+      "path": "/dormant-customers",
+      "status": 200,
+      "ms": 448.1,
+      "html": true
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "ms": 144.8,
+      "html": true
+    },
+    {
+      "path": "/deals",
+      "status": 200,
+      "ms": 234.6,
+      "html": true
+    },
+    {
+      "path": "/companies/1",
+      "status": 200,
+      "ms": 108.8,
+      "html": true
+    },
+    {
+      "path": "/companies",
+      "status": 200,
+      "ms": 139.3,
+      "html": true
+    },
+    {
+      "path": "/deals",
+      "status": 200,
+      "ms": 368.7,
+      "html": true
+    },
+    {
+      "path": "/tickets",
+      "status": 200,
+      "ms": 275.3,
+      "html": true
+    },
+    {
+      "path": "/dormant-customers",
+      "status": 200,
+      "ms": 549.9,
+      "html": true
+    },
+    {
+      "path": "/dormant-customers",
+      "status": 200,
+      "ms": 416.6,
+      "html": true
+    }
+  ],
+  "totals_after": {
+    "companies": 17386,
+    "contacts": 64212,
+    "deals": 33577,
+    "products": 1735,
+    "line_items": 41014,
+    "tickets": 21329,
+    "notes": 143410,
+    "tasks": 0,
+    "meetings": 36200,
+    "calls": 107761,
+    "emails": 72232
+  },
+  "sample_records_checked": 50,
+  "health_after": {
+    "status": "ok",
+    "version": "2026-09",
+    "ui": {
+      "today": "/",
+      "assistant": "/assistant",
+      "companies": "/companies",
+      "contacts": "/contacts",
+      "deals": "/deals",
+      "tickets": "/tickets",
+      "dormant": "/dormant-customers"
+    }
+  },
+  "completed_at": "2026-10-09T12:54:24.349744+00:00",
+  "passed": true
+}

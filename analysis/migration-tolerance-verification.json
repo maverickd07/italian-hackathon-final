@@ -1,0 +1,37 @@
+{
+  "full_import": {
+    "seconds": 43.5,
+    "counts": {
+      "companies": 17734,
+      "contacts": 64212,
+      "products": 1735,
+      "deals": 33577,
+      "line_items": 41014,
+      "tickets": 21329,
+      "notes": 143410,
+      "meetings": 36200,
+      "calls": 107761,
+      "emails": 72232
+    },
+    "total": 539204,
+    "associations": 1393960
+  },
+  "synthetic_garbage": "HTTP 204; all entity records retained; bad typed values empty; diagnostic counts persisted",
+  "model_calls": 0,
+  "railway_full_import_verified": false,
+  "property_comparison": {
+    "compared": 539204,
+    "field_differences": {},
+    "examples": [],
+    "normalization": "absent and empty equivalent; new source_activity_type excluded"
+  },
+  "tests": {
+    "sqlite": 101,
+    "postgresql": 101
+  },
+  "deployment": {
+    "id": "ffe5f68e-111e-45e7-90fe-22ec9addbf74",
+    "public_health_status": 200,
+    "verified_at": "2026-10-09T10:19:39Z"
+  }
+}

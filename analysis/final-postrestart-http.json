@@ -1,0 +1,29 @@
+{
+  "deployment": "feec912b-c7b0-40e5-8648-3eaa217bc17e",
+  "health": {
+    "status": "ok",
+    "version": "2026-09",
+    "ui": {
+      "today": "/",
+      "assistant": "/assistant",
+      "companies": "/companies",
+      "contacts": "/contacts",
+      "deals": "/deals",
+      "tickets": "/tickets",
+      "dormant": "/dormant-customers"
+    }
+  },
+  "auth_passed": true,
+  "browser_login_passed": true,
+  "model_called": false,
+  "read_load": {
+    "concurrency": 20,
+    "requests": 200,
+    "statuses": {
+      "200": 200
+    },
+    "p95_seconds": 0.12986787499903585,
+    "p50_seconds": 0.04914881250078906,
+    "max_seconds": 0.1471064170000318
+  }
+}
